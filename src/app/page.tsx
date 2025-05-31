@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Header } from "@/components/Header";
+import Header from "@/components/Header";
 
 const defaultInfo = {
   name: "Rukshana Kapali",
@@ -14,9 +14,9 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header 
-        props={defaultInfo}
+        headerInfo={defaultInfo}
       />
-      
+
       {/* Horizontal divider section */}
       <hr className="border-t border-gray-600 mt-6 w-full max-w-4xl" />
 
