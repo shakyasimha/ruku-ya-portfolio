@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 interface HeaderProps {
-    info: {
+    headerInfo: {
         name: string, 
         subtitle: string, 
         call: string, 
@@ -9,7 +9,7 @@ interface HeaderProps {
     }
 };
 
-export default function Page({ props }: HeaderProps) {
+export default function Page({ headerInfo }: HeaderProps) {
     return(
         <div className="flex flex-col min-h-screen">
             {/* Cover photo */}
@@ -37,14 +37,14 @@ export default function Page({ props }: HeaderProps) {
                 {/* Client name, client description and contact buttons */}
                 <div className="flex flex-col md:flex-row items-center justify-between w-full mt-4 md:mt-8">
                     <div className="text-center md:text-left md:ml-8 md:mt-4">
-                    <h1 className="text-3xl font-bold">{ props.name }</h1>
-                    <p className="text-[#333] text-xl">{ props.subtitle }</p>
+                    <h1 className="text-3xl font-bold">{ headerInfo.name }</h1>
+                    <p className="text-[#333] text-xl">{ headerInfo.subtitle }</p>
                     </div>
         
                     {/* Buttons */}
                     <div className="flex gap-2 mt-4 md:mt-0 justify-center md:justify-end">
-                    <button className="px-4 py-2 bg-blue-500 text-white rounded">{ props.call }</button>
-                    <button className="px-4 py-2 border border-gray-300 rounded">{ props.message }</button>
+                    <button className="px-4 py-2 bg-blue-500 text-white rounded">{ headerInfo.call }</button>
+                    <button className="px-4 py-2 border border-gray-300 rounded">{ headerInfo.message }</button>
                     </div>
                 </div>
             </div>
