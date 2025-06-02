@@ -10,7 +10,7 @@ const alegreyaSans = Alegreya_Sans({
 
 const roboto = Roboto({
   weight: ['400', '500', '700']
-})
+});
 
 export default function Home() {
   return (
