@@ -5,20 +5,22 @@ import { Alegreya_Sans, Alegreya_Sans_SC, Noto_Sans_Newa, Noto_Serif_Devanagari 
 // Fonts 
 const alegreyaSans = Alegreya_Sans({
     weight: ['400', '500', '700'],
-    subsets: ["latin"],
+    subsets: ['latin'],
 });
 
 const alegreyaSC = Alegreya_Sans_SC({ 
     weight: ['500', '700'],
-    subsets: ["latin"],
+    subsets: ['latin'],
 });
 
 const newaLipi = Noto_Sans_Newa({
-    weight: ['400']
+    weight: ['400'], 
+    subsets: ['newa']
 });
 
 const notoSerifDevanagari = Noto_Serif_Devanagari({
-    weight: ['400', '500', '700']
+    weight: ['400', '500', '700'],
+    subsets: ['devanagari']
 })
 
 interface HeaderProps {
