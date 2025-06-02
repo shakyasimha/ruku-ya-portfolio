@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { Alegreya_Sans, Alegreya_Sans_SC } from "next/font/google";
-import ChangeLanguage from "@/components/ChangeLanguage";
 
 // Fonts 
 const alegreyaSans = Alegreya_Sans({
@@ -47,11 +46,6 @@ export default function Page({ title }: HeaderProps) {
                     <div className="text-center md:text-left md:ml-8 md:mt-4">
                         <h1 className={`${alegreyaSC.className} text-3xl font-bold`}>{title}</h1>
                         {/* <p className={`${alegreyaSans.className} text-xl text-[#333]`}>{headerInfo.subtitle}</p> */}
-                    </div>
-                    
-                    {/* This part contains links for the website in different languages */}
-                    <div className="text-center flex-row">
-                        <ChangeLanguage />
                     </div>
                 </div>
             </div>
