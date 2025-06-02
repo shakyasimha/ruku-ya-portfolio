@@ -1,8 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import { Alegreya_Sans, Roboto } from "next/font/google";
 import Header from "@/components/Header";
 
+// Font 
+const alegreyaSans = Alegreya_Sans({
+  weight: ['400', '500', '700']
+});
+
+const roboto = Roboto({
+  weight: ['400', '500', '700']
+})
 
 export default function Home() {
   return (
@@ -15,8 +23,8 @@ export default function Home() {
       {/* Content section */}
       <div className="flex flex-col md:flex-row gap-6 p-4 max-w-4xl mx-auto mt-8">
         {/* About Me section */}
-        <div className="flex-1 md:mr-4 mx-4">
-          <h2 className="text-xl font-semibold">About Me</h2>
+        <div className={`${roboto.className} flex-1 md:mr-4 mx-4`}>
+          <h2 className={`${alegreyaSans.className} text-2xl font-bold`}>About Me</h2>
           <p className="text-gray-700 mt-2 text-justify">
             My interest and work involves Language, Linguistics, Newa issues, Nepala Bhasa, Law, and SOGIESC issues. I engage in knowledge production through research, awareness toolkit publications, academic writing, and so on. I also engage in policy and legal issues, in which I mostly center on litigation. <br />
           </p>
@@ -31,7 +39,7 @@ export default function Home() {
         {/* Location, contact details */}
         <div className="flex-1 space-y-4 mx-4 md:ml-16 mt-2">
           <div>
-            <h2 className="text-xl font-bold">Location</h2>
+            <h2 className={`${alegreyaSans.className} text-2xl font-bold`}>Location</h2>
             <div className="flex items-center gap-2 mt-1">
               <Image 
                 src="https://flagcdn.com/w80/np.png"
@@ -39,18 +47,23 @@ export default function Home() {
                 height={20}
                 alt="Nepal flag"
               />
-              <p className="font-bold">Lalitpur, Nepal</p>
+              <p className={`${roboto.className}`}>Lalitpur, Nepal</p>
             </div>
           </div>
 
           <div>
-            <h2 className="text-xl font-bold">Email</h2>
-            <p>rukshanakapali1144@gmail.com</p>
+            <h2 className={`${alegreyaSans.className} text-2xl font-bold`}>Email</h2>
+            <Link 
+              className={`${roboto.className} hover:opacity-80 hover:transition hover:duration-500`} 
+              href="mailto:rukshanakapali1144@gmail.com"
+            >
+              rukshanakapali1144@gmail.com
+            </Link>
           </div>
 
           <div>
-            <h2 className="text-xl font-bold">Contact Number</h2>
-            <p>+977-9808262699</p>
+            <h2 className={`${alegreyaSans.className} text-2xl font-bold`}>Contact Number</h2>
+            <p className={`${roboto.className}`}>+977-9808262699</p>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Alegreya_Sans, Alegreya_Sans_SC, Noto_Sans_Newa } from "next/font/google";
+import { Alegreya_Sans, Alegreya_Sans_SC, Noto_Sans_Newa, Noto_Serif_Devanagari } from "next/font/google";
 
 // Fonts 
 const alegreyaSans = Alegreya_Sans({
@@ -15,6 +15,10 @@ const alegreyaSC = Alegreya_Sans_SC({
 
 const newaLipi = Noto_Sans_Newa({
     weight: ['400']
+});
+
+const notoSerifDevanagari = Noto_Serif_Devanagari({
+    weight: ['400', '500', '700']
 })
 
 interface HeaderProps {
@@ -45,22 +49,33 @@ export default function Page({ title }: HeaderProps) {
                         className="object-cover"
                     />
                 </div>
-        
+
                 {/* Client name, client description and contact buttons */}
                 <div className="flex flex-col items-center justify-between w-full mt-4 md:mt-8">
-                    <div className="text-center md:text-left md:ml-8 md:mt-4">
-                        <h1 className={`${alegreyaSC.className} text-3xl font-bold`}>{title}</h1>
-                        {/* <p className={`${alegreyaSans.className} text-xl text-[#333]`}>{headerInfo.subtitle}</p> */}
-                    </div>
-                    
                     {/* This part contains links for the website in different languages */}
-                    <div className="text-center flex-row">
+                    <div className="mt-2 text-center flex-row">
                         <Link
-                            className={`${newaLipi.className} mx-2 text-[#A1C265] hover:opacity-70 hover:transition hover:duration-500`}
-                            href="/ne/page"
+                            className={`${newaLipi.className} font-bold mx-4 text-[#A1C265] hover:opacity-70 hover:transition hover:duration-500`}
+                            href="/ne"
                         >
                             𑐖𑐶𑐐𑐹 𑐴𑑂𑐩𑐳𑐶𑐂𑐎𑐵
                         </Link>
+                        <Link
+                            className={`${notoSerifDevanagari.className} font-bold mx-4 text-[#A1C265] hover:opacity-70 hover:transition hover:duration-500`}
+                            href="/np"
+                        >
+                            मेरो परिचय
+                        </Link>
+                        <Link
+                            className={`${alegreyaSans.className} font-bold mx-4 text-[#A1C265] hover:opacity-70 hover:transition hover:duration-500`}
+                            href="/"
+                        >
+                            My Introduction
+                        </Link>
+                    </div>
+                    
+                    <div className="text-center md:ml-4 md:mt-4">
+                        <h1 className={`${alegreyaSC.className} text-4xl font-bold`}>{title}</h1>
                     </div>
                 </div>
             </div>
