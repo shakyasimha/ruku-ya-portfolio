@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import { Alegreya_Sans, Alegreya_Sans_SC } from "next/font/google";
+import Link from 'next/link';
+import { Alegreya_Sans, Alegreya_Sans_SC, Noto_Sans_Newa } from "next/font/google";
 
 // Fonts 
 const alegreyaSans = Alegreya_Sans({
@@ -11,6 +12,10 @@ const alegreyaSC = Alegreya_Sans_SC({
     weight: ['500', '700'],
     subsets: ["latin"],
 });
+
+const newaLipi = Noto_Sans_Newa({
+    weight: ['400']
+})
 
 interface HeaderProps {
     title: string
@@ -46,6 +51,16 @@ export default function Page({ title }: HeaderProps) {
                     <div className="text-center md:text-left md:ml-8 md:mt-4">
                         <h1 className={`${alegreyaSC.className} text-3xl font-bold`}>{title}</h1>
                         {/* <p className={`${alegreyaSans.className} text-xl text-[#333]`}>{headerInfo.subtitle}</p> */}
+                    </div>
+                    
+                    {/* This part contains links for the website in different languages */}
+                    <div className="text-center flex-row">
+                        <Link
+                            className={`${newaLipi.className} mx-2 text-[#A1C265] hover:opacity-70 hover:transition hover:duration-500`}
+                            href="/ne/page"
+                        >
+                            𑐖𑐶𑐐𑐹 𑐴𑑂𑐩𑐳𑐶𑐂𑐎𑐵
+                        </Link>
                     </div>
                 </div>
             </div>
