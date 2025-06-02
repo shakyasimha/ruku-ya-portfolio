@@ -1,7 +1,6 @@
 import Image from 'next/image';
-import Link from 'next/link';
-
 import { Alegreya_Sans, Alegreya_Sans_SC } from "next/font/google";
+import ChangeLanguage from "@/components/ChangeLanguage";
 
 // Fonts 
 const alegreyaSans = Alegreya_Sans({
@@ -52,7 +51,7 @@ export default function Page({ title }: HeaderProps) {
                     
                     {/* This part contains links for the website in different languages */}
                     <div className="text-center flex-row">
-                        
+                        <ChangeLanguage />
                     </div>
                 </div>
             </div>
