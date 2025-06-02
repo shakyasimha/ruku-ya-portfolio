@@ -5,13 +5,13 @@ import Header from "@/components/Header";
 
 // Font 
 const alegreyaSans = Alegreya_Sans({
+  subsets: ['latin'],
   weight: ['400', '500', '700'],
-  subsets: ['latin']
 });
 
 const roboto = Roboto({
+  subsets: ['latin'],
   weight: ['400', '500', '700'], 
-  subsets: ['latin']
 });
 
 export default function Home() {

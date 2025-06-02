@@ -5,13 +5,13 @@ import Header from "@/components/Header";
 
 // Font
 const newaLipi = Noto_Sans_Newa({
+    subsets: ['newa'],
     weight: ['400'],
-    subsets: [`newa`]
 });
 
 const roboto = Roboto({
-  weight: ['400', '500', '700'],
-  subsets: ['latin']
+    subsets: ['latin'],
+    weight: ['400', '500', '700'],
 });
 
 export default function Home() {

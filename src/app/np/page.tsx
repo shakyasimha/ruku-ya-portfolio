@@ -5,13 +5,13 @@ import Header from "@/components/Header";
 
 // Font
 const notoSerifDevanagari = Noto_Serif_Devanagari({
+    subsets: ['devanagari'],
     weight: ['400', '500', '700'],
-    subsets: ['devanagari']
 });
 
 const roboto = Roboto({
-  weight: ['400', '500', '700'], 
-  subsets: ['latin']
+    subsets: ['latin'],
+    weight: ['400', '500', '700'], 
 });
 
 export default function Home() {
