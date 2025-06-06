@@ -14,6 +14,12 @@ const roboto = Roboto({
   weight: ['400', '500', '700'], 
 });
 
+// Metadata
+export const metadata = {
+    title: 'My Introduction - Rukshana Kapali'
+};
+
+// Main component
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -36,6 +42,20 @@ export default function Home() {
           <p className="text-gray-700 mt-2 text-justify">
             Since N.S. 1143 (2022), I began working around Jugi community’s traditional abode of Satachhen. I have been lobbying, campaigning and petitioning to ensure right of ownership, right to housing and several other aspects of the community’s historical residence.
           </p>
+
+          <h2 className={`${alegreyaSans.className} mt-4 text-2xl font-bold`}>Demographics</h2>
+          <p className="text-gray-700 mt-2 text-justify">
+            I am a trans woman. My pronouns are she/her. I go by the title Ms. I describe my sexual orientation as panromantic and fluid.
+          </p> 
+          <p className="text-gray-700 mt-2 text-justify">
+            My date of birth is N.S. 1119 Chila 16 (4 March 1999 C.E.) In Newa culture, we observe our rituals based on Lunar Calendar of the Nepala Sambata, therefore I celebrate my birthday on the month of Chila (fifth month), third lunar phase of the dark fortnight.
+          </p>
+          <p className="text-gray-700 mt-2 text-justify">
+            My nationality is Nepa-mi (Nepali). I come from the Newa inidgenous nationality. Within Newa, I am from the Jugi community.
+          </p>
+          <p className="text-gray-700 mt-2 text-justify">
+            I have a mild physical disability, i.e. residual disability from treated bilateral congenital clubfeet.
+          </p>   
         </div>
 
         {/* Location, contact details */}
