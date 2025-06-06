@@ -70,7 +70,7 @@ export default function Page({ title }: HeaderProps) {
                         </Link>
                         <Link
                             className={`${alegreyaSans.className} font-bold mx-4 text-[#A1C265] hover:opacity-70 hover:transition hover:duration-500`}
-                            href="/"
+                            href="/en"
                         >
                             My Introduction
                         </Link>
