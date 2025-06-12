@@ -1,6 +1,4 @@
-import Image from "next/image";
-import Link from "next/link";
-import { newaLipi, roboto } from "@/ui/fonts";
+import { newaLipi } from "@/ui/fonts";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -42,42 +40,13 @@ export default function Home() {
 
           </p>
         </div>
-
-        {/* Location, contact details */}
-        <div className="flex-1 space-y-4 mx-4 md:ml-16 mt-2">
-          <div>
-            <h2 className="text-xl font-bold">𑐠𑐵𑐫𑑂</h2>
-            <div className="flex items-center gap-2 mt-1">
-              <Image 
-                src="https://flagcdn.com/w80/np.png"
-                width={20}
-                height={20}
-                alt="Nepal flag"
-              />
-              <p>𑐫𑐮, 𑐣𑐾𑐥𑐵𑐮</p>
-            </div>
-          </div>
-
-          <div>
-            <h2 className="text-xl font-bold">𑐃𑐩𑐾𑐮</h2>
-            <Link 
-                className={`${roboto.className} hover:opacity-80 hover:transition hover:duration-500`}
-                href="mailto:rukshanakapali1144@gmail.com"
-            >
-                rukshanakapali1144@gmail.com
-            </Link>
-          </div>
-
-          <div>
-            <h2 className="text-xl font-bold">𑐫𑐵𑑄𑐨𑐵𑐫𑑂 𑐮𑑂𑐫𑐵𑑅</h2>
-            <p>+𑑙𑑗𑑗-𑑙𑑘𑑐𑑘𑑒𑑖𑑒𑑖𑑙𑑙</p>
-          </div>
-        </div>
       </div>
 
       {/* Footer section */}
       <Footer 
         info={{
+          headerClassName: newaLipi.className,
+          className: newaLipi.className,
           name: "𑐬𑐸𑐎𑑂𑐳𑐣𑐵 𑐎𑐥𑐵𑐮𑐶", 
           profileLink: "", 
           litigationLink: "", 

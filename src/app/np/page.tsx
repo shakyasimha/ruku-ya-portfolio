@@ -1,7 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
-import { notoSerifDevanagari, roboto } from "@/ui/fonts";
+import { notoSerifDevanagari } from "@/ui/fonts";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 // Site metadata 
 export const metadata = {
@@ -51,37 +50,25 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Location, contact details */}
-        <div className="flex-1 space-y-4 mx-4 md:ml-16 mt-2">
-          <div>
-            <h2 className="text-xl font-bold">ठेगाना</h2>
-            <div className="flex items-center gap-2 mt-1">
-              <Image 
-                src="https://flagcdn.com/w80/np.png"
-                width={20}
-                height={20}
-                alt="Nepal flag"
-              />
-              <p>ललितपुर, नेपाल</p>
-            </div>
-          </div>
-
-          <div>
-            <h2 className="text-xl font-bold">ईमेल</h2>
-            <Link 
-                className={`${roboto.className} hover:opacity-80 hover:transition hover:duration-500`}
-                href="mailto:rukshanakapali1144@gmail.com"
-            >
-                rukshanakapali1144@gmail.com
-            </Link>
-          </div>
-
-          <div>
-            <h2 className="text-xl font-bold">सम्पर्क नम्बर</h2>
-            <p>+९७७-९८०८२६२६९९</p>
-          </div>
-        </div>
       </div>
+
+      {/* Footer */}
+      <Footer 
+          info={{
+            headerClassName: notoSerifDevanagari.className,
+            className: notoSerifDevanagari.className,
+            name: "रुक्शना कपाली", 
+            profileLink: "", 
+            litigationLink: "", 
+            publicationLink: "",
+            locationHeader: "ठेगाना", 
+            location: "ललितपुर, नेपाल", 
+            emailHeader: "ईमेल", 
+            email: "rukshanakapali1144@gmail.com", 
+            phoneHeader: "सम्पर्क नम्बर", 
+            phone: "+९७७-९८०८२६२६९९"
+          }}
+        />
     </div> 
   );
 }

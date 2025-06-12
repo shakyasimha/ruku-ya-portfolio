@@ -1,7 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
-import { alegreyaSans, roboto } from "@/ui/fonts";
+import { alegreyaSans, alegreyaSC, roboto } from "@/ui/fonts";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 // Metadata
 export const metadata = {
@@ -46,38 +45,25 @@ export default function Home() {
             I have a mild physical disability, i.e. residual disability from treated bilateral congenital clubfeet.
           </p>   
         </div>
-
-        {/* Location, contact details */}
-        <div className="flex-1 space-y-4 mx-4 md:ml-16 mt-2">
-          <div>
-            <h2 className={`${alegreyaSans.className} text-2xl font-bold`}>Location</h2>
-            <div className="flex items-center gap-2 mt-1">
-              <Image 
-                src="https://flagcdn.com/w80/np.png"
-                width={20}
-                height={20}
-                alt="Nepal flag"
-              />
-              <p className={`${roboto.className}`}>Lalitpur, Nepal</p>
-            </div>
-          </div>
-
-          <div>
-            <h2 className={`${alegreyaSans.className} text-2xl font-bold`}>Email</h2>
-            <Link 
-              className={`${roboto.className} hover:opacity-80 hover:transition hover:duration-500`} 
-              href="mailto:rukshanakapali1144@gmail.com"
-            >
-              rukshanakapali1144@gmail.com
-            </Link>
-          </div>
-
-          <div>
-            <h2 className={`${alegreyaSans.className} text-2xl font-bold`}>Contact Number</h2>
-            <p className={`${roboto.className}`}>+977-9808262699</p>
-          </div>
-        </div>
       </div>
+
+      {/* Footer section */}
+      <Footer 
+        info={{
+          headerClassName: alegreyaSC.className,
+          className: alegreyaSans.className,
+          name: "Rukshana Kapali", 
+          profileLink: "", 
+          litigationLink: "", 
+          publicationLink: "",
+          locationHeader: "Location", 
+          location: "Lalitpur, Nepal", 
+          emailHeader: "Email", 
+          email: "rukshanakapali1144@gmail.com", 
+          phoneHeader: "Phone", 
+          phone: "+977-9808262699"
+        }}
+      />
     </div> 
   );
 }
