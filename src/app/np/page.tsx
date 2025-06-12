@@ -1,18 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Noto_Serif_Devanagari, Roboto } from "next/font/google";
+import { notoSerifDevanagari, roboto } from "@/ui/fonts";
 import Header from "@/components/Header";
-
-// Font
-const notoSerifDevanagari = Noto_Serif_Devanagari({
-    subsets: ['devanagari'],
-    weight: ['400', '500', '700'],
-});
-
-const roboto = Roboto({
-    subsets: ['latin'],
-    weight: ['400', '500', '700'], 
-});
 
 // Site metadata 
 export const metadata = {

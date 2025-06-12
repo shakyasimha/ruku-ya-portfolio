@@ -1,27 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Alegreya_Sans, Alegreya_Sans_SC, Noto_Sans_Newa, Noto_Serif_Devanagari } from "next/font/google";
-
-// Fonts 
-const alegreyaSans = Alegreya_Sans({
-    weight: ['400', '500', '700'],
-    subsets: ['latin'],
-});
-
-const alegreyaSC = Alegreya_Sans_SC({ 
-    weight: ['500', '700'],
-    subsets: ['latin'],
-});
-
-const newaLipi = Noto_Sans_Newa({
-    weight: ['400'], 
-    subsets: ['newa']
-});
-
-const notoSerifDevanagari = Noto_Serif_Devanagari({
-    weight: ['400', '500', '700'],
-    subsets: ['devanagari']
-})
+import { alegreyaSans, alegreyaSC, newaLipi, notoSerifDevanagari } from "@/ui/fonts";
 
 interface HeaderProps {
     title: string

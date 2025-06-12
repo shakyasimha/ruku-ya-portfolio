@@ -1,18 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Alegreya_Sans, Roboto } from "next/font/google";
+import { alegreyaSans, roboto } from "@/ui/fonts";
 import Header from "@/components/Header";
-
-// Font 
-const alegreyaSans = Alegreya_Sans({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'],
-});
-
-const roboto = Roboto({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'], 
-});
 
 // Metadata
 export const metadata = {

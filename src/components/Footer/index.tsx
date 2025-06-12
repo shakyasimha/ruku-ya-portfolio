@@ -1,40 +1,62 @@
 import Link from 'next/link';
-import { Alegreya_Sans, Alegreya_Sans_SC, Noto_Sans_Newa, Noto_Serif_Devanagari } from "next/font/google";
-
-// Fonts 
-const alegreyaSans = Alegreya_Sans({
-    weight: ['400', '500', '700'],
-    subsets: ['latin'],
-});
-
-const alegreyaSC = Alegreya_Sans_SC({ 
-    weight: ['500', '700'],
-    subsets: ['latin'],
-});
-
-const newaLipi = Noto_Sans_Newa({
-    weight: ['400'], 
-    subsets: ['newa']
-});
-
-const notoSerifDevanagari = Noto_Serif_Devanagari({
-    weight: ['400', '500', '700'],
-    subsets: ['devanagari']
-});
+import Image from 'next/image';
+import { alegreyaSans } from "@/ui/fonts";
 
 interface FooterProps {
-    locationHeader: string, 
-    location: string, 
-    emailHeader: string, 
-    email: string, 
-    contactHeader: string, 
-    contact: string
+    info: {
+        name: string, 
+        profileLink: string, 
+        litigationLink: string, 
+        publicationLink: string,
+        locationHeader: string, 
+        location: string, 
+        emailHeader: string, 
+        email: string, 
+        phoneHeader: string, 
+        phone: string
+    }
 }
 
-export default function Footer() {
+export default function Footer({ info }: FooterProps) {
     return(
-        <footer className="text-[#333] py-6"> 
-            
+        <footer className={`${alegreyaSans.className}text-[#333] py-6`}> 
+            <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row w-full items-center">
+                {/* Contains name */}
+                <div className="flex-1 flex flex-col py-4 gap-2 sm:m-0 m-4">
+                    <span className="text-2xl font-bold">{info.name}</span>
+                </div>
+
+                {/* Contains links */}
+                <div className="flex-1 flex flex-col py-4 gap-2 sm:m-0 m-4">
+                    Nothing Nothing
+                </div>
+
+                {/* Contains contact links */}
+                <div className="flex-1 flex flex-col py-4 gap-2 sm:m-0 m-4">
+                    <div className="flex flex-row gap-4">
+                        <h2 className="font-bold min-w-[120px]"> {info.locationHeader} </h2>
+                        <span> {info.location}</span>
+                    </div>
+                    
+                    <div className="flex flex-row gap-4">
+                        <h2 className="font-bold min-w-[120px]"> {info.emailHeader} </h2>
+                        <span> {info.email} </span>
+                    </div>
+
+                    <div className="flex flex-row gap-4">
+                        <h2 className="font-bold min-w-[120px]"> {info.phoneHeader} </h2>
+                        <span> {info.phone} </span>
+                    </div>
+                </div>
+            </div>
+
+            {/* Divider line */}
+            <div className="mx-auto w-[90%] h-[1px] bg-gray-400 mt-6"></div>
+
+            {/* Bottom text */}
+            <div className="text-center text-xs mt-4">
+                &copy; {new Date().getFullYear()} Rukshana Kapali.
+            </div>
         </footer>
     );
 }

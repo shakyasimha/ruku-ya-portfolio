@@ -1,18 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Noto_Sans_Newa, Roboto } from "next/font/google";
+import { newaLipi, roboto } from "@/ui/fonts";
 import Header from "@/components/Header";
-
-// Font
-const newaLipi = Noto_Sans_Newa({
-    subsets: ['newa'],
-    weight: ['400'],
-});
-
-const roboto = Roboto({
-    subsets: ['latin'],
-    weight: ['400', '500', '700'],
-});
+import Footer from "@/components/Footer";
 
 // Metadata
 export const metadata = {
@@ -23,6 +13,7 @@ export const metadata = {
 export default function Home() {
   return (
     <div className={`${newaLipi.className} flex flex-col min-h-screen`}>
+      {/* Header section */}
       <Header title="𑐬𑐸𑐎𑑂𑐳𑐣𑐵 𑐎𑐥𑐵𑐮𑐶"/>
 
       {/* Horizontal divider section */}
@@ -83,6 +74,22 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Footer section */}
+      <Footer 
+        info={{
+          name: "𑐬𑐸𑐎𑑂𑐳𑐣𑐵 𑐎𑐥𑐵𑐮𑐶", 
+          profileLink: "", 
+          litigationLink: "", 
+          publicationLink: "",
+          locationHeader: "𑐠𑐵𑐫𑑂", 
+          location: "𑐫𑐮, 𑐣𑐾𑐥𑐵𑐮", 
+          emailHeader: '𑐃𑐩𑐾𑐮', 
+          email: "rukshanakapali1144@gmail.com", 
+          phoneHeader: "𑐫𑐵𑑄𑐨𑐵𑐫𑑂 𑐮𑑂𑐫𑐵𑑅", 
+          phone: "+𑑙𑑗𑑗-𑑙𑑘𑑐𑑘𑑒𑑖𑑒𑑖𑑙𑑙"
+        }}
+      />
     </div> 
   );
 }
