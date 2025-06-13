@@ -1,6 +1,7 @@
 import { alegreyaSans, alegreyaSC, roboto } from "@/ui/fonts";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { nepalSambat, nepalSambatLatin } from "@/lib/fetchYear";
 
 // Metadata
 export const metadata = {
@@ -9,6 +10,8 @@ export const metadata = {
 
 // Main component
 export default function Home() {
+  const year = 'N.S. ' + nepalSambatLatin(nepalSambat());
+
   return (
     <div className="flex flex-col min-h-screen">
       <Header title="Rukshana Kapali"/>
@@ -61,7 +64,8 @@ export default function Home() {
           emailHeader: "Email", 
           email: "rukshanakapali1144@gmail.com", 
           phoneHeader: "Phone", 
-          phone: "+977-9808262699"
+          phone: "+977-9808262699",
+          year: year
         }}
       />
     </div> 

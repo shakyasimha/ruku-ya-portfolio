@@ -1,6 +1,7 @@
 import { newaLipi } from "@/ui/fonts";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { nepalSambat, nepalSambatNewa } from "@/lib/fetchYear";
 
 // Metadata
 export const metadata = {
@@ -9,6 +10,8 @@ export const metadata = {
 
 // Main component
 export default function Home() {
+  const year = '𑐣𑐾.𑐳𑑄. '+nepalSambatNewa(nepalSambat());
+
   return (
     <div className={`${newaLipi.className} flex flex-col min-h-screen`}>
       {/* Header section */}
@@ -56,7 +59,8 @@ export default function Home() {
           emailHeader: '𑐃𑐩𑐾𑐮', 
           email: "rukshanakapali1144@gmail.com", 
           phoneHeader: "𑐫𑐵𑑄𑐨𑐵𑐫𑑂 𑐮𑑂𑐫𑐵𑑅", 
-          phone: "+𑑙𑑗𑑗-𑑙𑑘𑑐𑑘𑑒𑑖𑑒𑑖𑑙𑑙"
+          phone: "+𑑙𑑗𑑗-𑑙𑑘𑑐𑑘𑑒𑑖𑑒𑑖𑑙𑑙",
+          year: year
         }}
       />
     </div> 

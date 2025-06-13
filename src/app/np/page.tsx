@@ -1,6 +1,7 @@
 import { notoSerifDevanagari } from "@/ui/fonts";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { nepalSambat, nepalSambatDevanagari } from "@/lib/fetchYear";
 
 // Site metadata 
 export const metadata = {
@@ -9,6 +10,8 @@ export const metadata = {
 
 // Main content
 export default function Home() {
+  const year = 'ने.सं. '+nepalSambatDevanagari(nepalSambat());
+
   return (
     <div className={`${notoSerifDevanagari.className} flex flex-col min-h-screen`}>
       <Header title="रुक्शना कपाली"/>
@@ -66,7 +69,8 @@ export default function Home() {
             emailHeader: "ईमेल", 
             email: "rukshanakapali1144@gmail.com", 
             phoneHeader: "सम्पर्क नम्बर", 
-            phone: "+९७७-९८०८२६२६९९"
+            phone: "+९७७-९८०८२६२६९९",
+            year: year
           }}
         />
     </div> 

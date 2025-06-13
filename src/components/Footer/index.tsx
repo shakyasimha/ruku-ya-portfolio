@@ -13,7 +13,8 @@ interface FooterProps {
         emailHeader: string, 
         email: string, 
         phoneHeader: string, 
-        phone: string
+        phone: string,
+        year: string
     }
 }
  
@@ -55,7 +56,7 @@ export default function Footer({ info }: FooterProps) {
 
             {/* Bottom text */}
             <div className="text-center text-xs mt-4">
-                &copy; {new Date().getFullYear()} {info.name}.
+                &copy; {info.year}. {info.name}.
             </div>
         </footer>
     );
