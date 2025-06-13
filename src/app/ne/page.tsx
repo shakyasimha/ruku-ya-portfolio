@@ -339,7 +339,24 @@ export default function Home() {
         </div>
       </div>
 
-
+      {/* Footer */}
+      <Footer 
+          info={{
+            headerClassName: newaLipi.className,
+            className: newaLipi.className,
+            name: "𑐬𑐸𑐎𑑂𑐳𑐣𑐵 𑐎𑐥𑐵𑐮𑐶", 
+            profileLink: "", 
+            litigationLink: "", 
+            publicationLink: "",
+            locationHeader: "𑐠𑐵𑐫𑑂", 
+            location: "𑐫𑐮, 𑐣𑐾𑐥𑐵𑐮", 
+            emailHeader: "𑐃𑐩𑐾𑐮", 
+            email: "rukshanakapali1144@gmail.com", 
+            phoneHeader: "𑐫𑐵𑑄𑐨𑐵𑐫𑑂 𑐮𑑂𑐫𑐵𑑅", 
+            phone: "+𑑙𑑗𑑗-𑑙𑑘𑑐𑑘𑑒𑑖𑑒𑑖𑑙𑑙",
+            year: year
+          }}
+        />
     </div>
   );
 }
