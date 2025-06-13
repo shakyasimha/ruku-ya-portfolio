@@ -16,7 +16,7 @@ interface FooterProps {
         phone: string
     }
 }
-
+ 
 export default function Footer({ info }: FooterProps) {
     return(
         <footer className="text-[#333] py-6"> 
@@ -55,7 +55,7 @@ export default function Footer({ info }: FooterProps) {
 
             {/* Bottom text */}
             <div className="text-center text-xs mt-4">
-                &copy; {new Date().getFullYear()} Rukshana Kapali.
+                &copy; {new Date().getFullYear()} {info.name}.
             </div>
         </footer>
     );
