@@ -32,9 +32,14 @@ export default function Page({ title }: HeaderProps) {
                 </div>
 
                 {/* Client name, client description and contact buttons */}
-                <div className="flex flex-col items-center justify-between w-full mt-4 md:mt-8">
-                    {/* This part contains links for the website in different languages */}
-                    <div className="mt-2 text-center flex-row">
+                <div className="flex flex-col items-center justify-between w-full mt-4 md:mt-16">
+                    {/* Title here */}
+                    <div className="text-center md:ml-4 md:mt-4">
+                        <h1 className={`${alegreyaSC.className} text-4xl font-bold`}>{title}</h1>
+                    </div>
+
+                    {/* Language links */}
+                    <div className="mt-8 text-center flex-row">
                         <Link
                             className={`${newaLipi.className} font-bold mx-4 text-[#A1C265] hover:opacity-70 hover:transition hover:duration-500`}
                             href="/ne"
@@ -53,10 +58,6 @@ export default function Page({ title }: HeaderProps) {
                         >
                             My Introduction
                         </Link>
-                    </div>
-                    
-                    <div className="text-center md:ml-4 md:mt-4">
-                        <h1 className={`${alegreyaSC.className} text-4xl font-bold`}>{title}</h1>
                     </div>
                 </div>
             </div>
