@@ -158,7 +158,7 @@ export default function Home() {
               Duration: 2020 July — 2022 July. <br/>
             </p>   
             <p className="text-gray-700 mt-2 mb-4 text-justify">
-              <strong>United Nations Educational, Scientific and Cultural Organization (UNESCO) <br/> in Krung Thep (Bangkok)</strong> 
+              <strong>United Nations Educational, Scientific and Cultural Organization (UNESCO) <br/> in Krung Thep (Bangkok)</strong> <br/>
               Project: Multi-country Activity on LGBTIQ+ Inclusive Education Settings. <br/>
               Position: Project Reference Group (previously called Regional Pilot Reference Group) member. <br/>
               Duration: 2022 — 2027. <br/>
@@ -541,8 +541,20 @@ export default function Home() {
           {/* Miscellaneous */}
           <div> 
             <h2 className={`${alegreyaSans.className} mt-8 mb-4 text-2xl font-bold text-red-700 md:text-start text-center`}>Miscellaneous</h2>
-            <p className="text-gray-700 mt-2 text-justify">
-            </p>   
+            <ol className="list-decimal pl-8">
+              <li>
+                I made some short funny videos in Nepala Bhasa that was named as <strong><em>Ruku Yu Vines</em></strong>, in the years N.S. 1140/41s. <br/>
+                <Link href="https://www.youtube.com/watch?v=WG8q92c3iak&feature=youtu.be" className={`${alegreyaSans.className} font-bold text-[#195f2b] hover:opacity-70 hover:transition hover:duration-500`} >Link to the video compilation</Link>.
+              </li>
+              <li>
+                I participated in <strong><em>Federal Mock Youth Parliament 2018</em></strong> (<em>संघीय युवा संसदको स्थापना र अभ्यास कार्यक्रम – २०७५</em>) organized by National Youth Council.
+              </li>
+              <li>
+                I took the <strong><em>Swo Yatra – Solo Women Travel Challenge</em></strong> in N.S. 1138 (2018), and made a fortnight trip to Mustang. <br/>
+                <Link href="https://nepaltraveller.com/sidetrack/246" className={`${alegreyaSans.className} font-bold text-[#195f2b] hover:opacity-70 hover:transition hover:duration-500`} >Link to the news</Link>. <br/>
+                <Link href="https://youtu.be/-TdPcsKbC80" className={`${alegreyaSans.className} font-bold text-[#195f2b] hover:opacity-70 hover:transition hover:duration-500`} >Link to the final video</Link>.
+              </li>
+            </ol>
           </div>
         </div>
       </div>
