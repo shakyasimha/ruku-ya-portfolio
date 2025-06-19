@@ -168,7 +168,7 @@ export default function Home() {
           <div> 
             <h2 className="my-8 text-2xl font-bold text-red-700 md:text-start text-center">कार्यकारिणी अनुभव</h2>
             <p className="text-gray-700 mt-2 mb-4 text-justify">
-              <strong>Queer Youth Group</strong> (<Link href="https://queeryouthgroup.org.np" className="font-bold text-[#195f2b] hover:opacity-70 hover:transition hover:duration-500">लिङ्क</Link>) <br/>
+              <strong>क्वेयर युथ ग्रुप</strong> (<Link href="https://queeryouthgroup.org.np" className="font-bold text-[#195f2b] hover:opacity-70 hover:transition hover:duration-500">लिङ्क</Link>) <br/>
               पद : प्रमुख कार्यकारी अधिकृत । <br/>
               अवधि : सन् २०२२ जुलाई — हालसम्म ।<br/>
               <br/>
@@ -476,8 +476,8 @@ export default function Home() {
             </p>
             <ul className="list-disc pl-8">
               <li><Link href="https://rukshanakapali1119.wordpress.com/myacademia/" className="font-bold text-[#195f2b] hover:opacity-70 hover:transition hover:duration-500">प्राज्ञिक</Link></li>
-              <li><Link href="https://rukshanakapali1119.wordpress.com/myarticles/" className="font-bold text-[#195f2b] hover:opacity-70 hover:transition hover:duration-500">फुटकर लेख</Link>.</li>
-              <li><Link href="https://rukshanakapali1119.wordpress.com/mybooks/" className="font-bold text-[#195f2b] hover:opacity-70 hover:transition hover:duration-500">पुस्तक</Link>.</li>
+              <li><Link href="https://rukshanakapali1119.wordpress.com/myarticles/" className="font-bold text-[#195f2b] hover:opacity-70 hover:transition hover:duration-500">फुटकर लेख</Link></li>
+              <li><Link href="https://rukshanakapali1119.wordpress.com/mybooks/" className="font-bold text-[#195f2b] hover:opacity-70 hover:transition hover:duration-500">पुस्तक</Link></li>
             </ul>
             <p className="text-gray-700 mt-2 text-justify">
               <Link href="https://archive.org/details/@user_28080" className="font-bold text-[#195f2b] hover:opacity-70 hover:transition hover:duration-500">आरकाइभ थोप्लो अर्गमा</Link> पनि मैले लेखेका कृतिहरूको संकलन छ ।
