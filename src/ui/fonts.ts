@@ -3,11 +3,13 @@ import { Alegreya_Sans, Alegreya_Sans_SC, Noto_Sans_Newa, Noto_Serif_Devanagari,
 // Fonts 
 export const alegreyaSans = Alegreya_Sans({
     weight: ['400', '500', '700'],
+    style: ['normal', 'italic'],
     subsets: ['latin'],
 });
 
 export const alegreyaSC = Alegreya_Sans_SC({ 
     weight: ['500', '700'],
+    style: ['normal', 'italic'],
     subsets: ['latin'],
 });
 
@@ -23,5 +25,6 @@ export const notoSerifDevanagari = Noto_Serif_Devanagari({
 
 export const roboto = Roboto({
     subsets: ['latin'],
+    style: ['normal', 'italic'],
     weight: ['400', '500', '700'],
 });
