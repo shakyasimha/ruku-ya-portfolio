@@ -486,9 +486,12 @@ export default function Home() {
 
           {/* Legal Portfolio */}
           <div> 
-            <h2 className="mb-4 text-2xl font-bold text-red-700 md:text-start text-center">Legal Portfolio</h2>
+            <h2 className="my-8 text-2xl font-bold text-red-700 md:text-start text-center">कानूनी वृत्तान्त </h2>
             <p className="text-gray-700 mt-2 text-justify">
-              Since the year N.S. 1141 (2020), I have been using litigation as a medium to establish legal and policy changes. I have created a separate portfolio of my legal work. It can be accessed in the following link : <Link href="https://rukshanakapalilitigations.wordpress.com/" className="font-bold text-[#195f2b] hover:opacity-70 hover:transition hover:duration-500">https://rukshanakapalilitigations.wordpress.com/</Link>.
+              म नेपाल संवत् ११४१ साल देखि कानूनी प्रक्रिया (लिटिगेशन) को माध्यमलाई प्रयोग गरी आफूले चासो राख्ने मुद्दाहरूमा कानूनी तथा नीतिगत परिवर्तन स्थापित गर्ने प्रयासमा छु ।  मेरो कानूनी वृतान्तको छुट्टै खण्ड <Link href="https://rukshanakapali1119.wordpress.com/legalportfolio/" className="font-bold text-[#195f2b] hover:opacity-70 hover:transition hover:duration-500">यस लिङ्कमा</Link> गएर हेर्नसक्नुहुनेछ ।
+            </p>
+            <p className="text-gray-700 mt-2 text-justify">
+              मैले विभिन्न विषयवस्तुमा दायर गरेका रिट निवेदनहरूको विस्तृत विवरण <Link href="https://rukshanakapali1119.wordpress.com/writ-petitions/" className="font-bold text-[#195f2b] hover:opacity-70 hover:transition hover:duration-500">यस लिङ्कमा</Link> गएर हेर्नसक्नुहुनेछ ।
             </p>   
           </div>
 
