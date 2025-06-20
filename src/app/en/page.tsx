@@ -353,7 +353,7 @@ export default function Home() {
                 Attendance: Krung Thep (Bangkok), Thailand. <br/>
                 Panel 2 : Forced eviction and displacement from the ancestral residence of Satachhen : Housing Crisis in Jugi Community of the Newa indigenous nationality. <br/>
                 <Link href="https://weareaptn.org/2018/06/29/trans-activists-advocate-for-their-rights-at-the-united-nations/" className={`${alegreyaSans.className} font-bold text-[#195f2b] hover:opacity-70 hover:transition hover:duration-500`} >
-                  Link to organizer's website.
+                  Link to organizer&apos;s website.
                 </Link>
               </li>
               <li>
@@ -362,7 +362,7 @@ export default function Home() {
                 Attendance: Ho Chi Minh, Vietnam. <br/>
                 Speaker at the opening panel in Women’s Pre-Conference and contributor in the Women’s Manifesto. <br/>
                 <Link href="https://www.ilgaasia2022.org/" className={`${alegreyaSans.className} font-bold text-[#195f2b] hover:opacity-70 hover:transition hover:duration-500`} >
-                  Link to organizer's website.
+                  Link to organizer&apos;s website.
                 </Link>
               </li>
               <li>
@@ -371,7 +371,7 @@ export default function Home() {
                 Attendance: Kathmandu, Nepal. <br/>
                 Panel: Disseminating intersectionality among women and queer people. <br/>
                 <Link href="https://rotaract3292.org/2022/04/16/14th-rotaract-district-conference/" className={`${alegreyaSans.className} font-bold text-[#195f2b] hover:opacity-70 hover:transition hover:duration-500`} >
-                  Link to organizer's website.
+                  Link to organizer&apos;s website.
                 </Link>
               </li>
               <li>
@@ -426,7 +426,7 @@ export default function Home() {
                   <li>Hearing from Trans Leaders: The change we want to see.</li>
                 </ol>
                 <Link href="https://programme.aids2018.org/People/PeopleDetailStandalone/9021" className={`${alegreyaSans.className} font-bold text-[#195f2b] hover:opacity-70 hover:transition hover:duration-500`} >
-                    Link to official website's person grid.
+                    Link to official website&apos;s person grid.
                 </Link>
               </li>
               <li>
@@ -438,7 +438,7 @@ export default function Home() {
                     Facebook Live Video.
                 </Link>
                 <Link href="https://gate.ngo/trans-activists-advocate-for-their-rights-at-the-united-nations/" className={`${alegreyaSans.className} font-bold text-[#195f2b] hover:opacity-70 hover:transition hover:duration-500`} >
-                    Link to  organizer's website.
+                    Link to  organizer&apos;s website.
                 </Link>
               </li>
               <li>
