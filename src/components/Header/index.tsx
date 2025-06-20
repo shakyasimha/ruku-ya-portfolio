@@ -35,7 +35,7 @@ export default function Page({ title }: HeaderProps) {
                 <div className="flex flex-col items-center justify-between w-full mt-4 md:mt-16">
                     {/* Title here */}
                     <div className="text-center md:ml-4 md:mt-4">
-                        <h1 className={`${alegreyaSC.className} text-4xl font-bold`}>{title}</h1>
+                        <h1 className={`${alegreyaSC.className} text-4xl font-bold`}><strong>{title}</strong></h1>
                     </div>
 
                     {/* Language links */}

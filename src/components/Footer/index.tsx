@@ -24,7 +24,7 @@ export default function Footer({ info }: FooterProps) {
             <div className="max-w-4xl mx-auto flex flex-col md:flex-row w-full items-center">
                 {/* Contains name */}
                 <div className="flex-1 flex flex-col py-4 gap-2 sm:m-0 m-4">
-                    <span className={`${info.headerClassName} text-3xl font-bold text-red-700`}>{info.name}</span>
+                    <span className={`${info.headerClassName} text-3xl font-bold text-red-700`}><strong>{info.name}</strong></span>
                 </div>
 
                 {/* Contains contact links */}

@@ -555,19 +555,19 @@ export default function Home() {
               <strong>𑐩𑐟𑐶𑐣𑐵 𑐫𑐵𑐫𑐾 𑐩𑐡𑐸𑐐𑐸 𑐠𑐵𑐫𑑂 :  </strong> (<Link href="https://whereloveisillegal.com/rukshana-kapali/" className="font-bold text-[#195f2b] hover:opacity-70 hover:transition hover:duration-500">𑐳𑑂𑐰𑐵𑐥𑐹</Link>)
             </p>
             <p className="text-gray-700 mt-2 text-justify">
-              𑐴𑐮𑐶𑑄 𑐡𑐾𑐫𑑂 𑐩𑑄𑐎𑐵𑑅 𑐏𑐮𑑅𑐫𑐵 𑐩𑐶𑐳𑐵 𑐎𑐰𑑅 : 𑐖𑐶 𑐔𑑂𑐰𑐣𑐵𑐔𑑂𑐰𑐣𑐵𑐐𑐸 𑐠𑐵𑐳𑑄 𑐳𑑂𑐰𑐫𑐾𑐧𑐮𑐫𑑂 𑐏𑑂𑐫𑐮𑑄𑐏𑑂𑐫𑑅 𑐳𑑂𑐰𑐵𑐥𑐹𑐫𑐵𑐟 𑐣𑐵𑐮𑐵𑑅 𑐎𑐵𑐫𑐾𑐐𑐸 𑐏𑑃𑐫𑑂 𑐣𑐶𑐐𑐸𑐮𑐶𑑄 𑐴𑑂𑐣𑑂𑐫𑐖𑑂𑐫𑐵𑐣𑐵𑐩𑐵𑐮𑐫𑑂 𑐴𑐵𑐟𑑂𑐠𑐵𑐫𑑂 𑐏𑐣𑐵 (<Link href="https://asiapacific.unwomen.org/en/news-and-events/stories/2019/06/fwis-rukshana-kapali" className="font-bold text-[#195f2b] hover:opacity-70 hover:transition hover:duration-500">𑐳𑑂𑐰𑐵𑐥𑐹</Link>)
+              <strong>𑐴𑐮𑐶𑑄 𑐡𑐾𑐫𑑂 𑐩𑑄𑐎𑐵𑑅 𑐏𑐮𑑅𑐫𑐵 𑐩𑐶𑐳𑐵 𑐎𑐰𑑅 : 𑐖𑐶 𑐔𑑂𑐰𑐣𑐵𑐔𑑂𑐰𑐣𑐵𑐐𑐸 𑐠𑐵𑐳𑑄 𑐳𑑂𑐰𑐫𑐾𑐧𑐮𑐫𑑂 𑐏𑑂𑐫𑐮𑑄𑐏𑑂𑐫𑑅 𑐳𑑂𑐰𑐵𑐥𑐹𑐫𑐵𑐟 𑐣𑐵𑐮𑐵𑑅 𑐎𑐵𑐫𑐾𑐐𑐸 𑐏𑑃𑐫𑑂 𑐣𑐶𑐐𑐸𑐮𑐶𑑄 𑐴𑑂𑐣𑑂𑐫𑐖𑑂𑐫𑐵𑐣𑐵𑐩𑐵𑐮𑐫𑑂 𑐴𑐵𑐟𑑂𑐠𑐵𑐫𑑂 𑐏𑐣𑐵</strong> (<Link href="https://asiapacific.unwomen.org/en/news-and-events/stories/2019/06/fwis-rukshana-kapali" className="font-bold text-[#195f2b] hover:opacity-70 hover:transition hover:duration-500">𑐳𑑂𑐰𑐵𑐥𑐹</Link>)
             </p>
             <p className="text-gray-700 mt-2 text-justify">
-              𑐴𑐮𑐶𑑄 𑐡𑐾𑐫𑑂 𑐩𑑄𑐎𑐵𑑅 𑐏𑐮𑑅𑐫𑐵 𑐳𑐸𑐔𑑄 𑐡𑐠𑐸𑐎𑐸𑐠𑐶 : (<Link href="https://un.info.np/Net/NeoDocs/View/9214" className="font-bold text-[#195f2b] hover:opacity-70 hover:transition hover:duration-500">𑐳𑑂𑐰𑐵𑐥𑐹</Link>)
+              <strong>𑐴𑐮𑐶𑑄 𑐡𑐾𑐫𑑂 𑐩𑑄𑐎𑐵𑑅 𑐏𑐮𑑅𑐫𑐵 𑐳𑐸𑐔𑑄 𑐡𑐠𑐸𑐎𑐸𑐠𑐶</strong> : (<Link href="https://un.info.np/Net/NeoDocs/View/9214" className="font-bold text-[#195f2b] hover:opacity-70 hover:transition hover:duration-500">𑐳𑑂𑐰𑐵𑐥𑐹</Link>)
             </p>
             <p className="text-gray-700 mt-2 text-justify">
-              𑐖𑐵𑑅 𑐄𑐟𑐶𑑄𑐐𑑂𑐫𑑄𑐎𑐾𑐐𑐸 𑐖𑑂𑐫𑐵𑐫𑑂 𑐖𑐶𑐐𑐹 𑐎𑐸𑐟𑑅, 𑐳𑐶 𑐂𑐖 𑐡 𑐳𑑂𑐟𑑀𑐬𑐶 (<Link href="http://sheisthestory.com/my-struggle-for-gender-equality-rukshana-kapali/" className="font-bold text-[#195f2b] hover:opacity-70 hover:transition hover:duration-500">𑐳𑑂𑐰𑐵𑐥𑐹</Link>)
+              <strong>𑐖𑐵𑑅 𑐄𑐟𑐶𑑄𑐐𑑂𑐫𑑄𑐎𑐾𑐐𑐸 𑐖𑑂𑐫𑐵𑐫𑑂 𑐖𑐶𑐐𑐹 𑐎𑐸𑐟𑑅, 𑐳𑐶 𑐂𑐖 𑐡 𑐳𑑂𑐟𑑀𑐬𑐶</strong> (<Link href="http://sheisthestory.com/my-struggle-for-gender-equality-rukshana-kapali/" className="font-bold text-[#195f2b] hover:opacity-70 hover:transition hover:duration-500">𑐳𑑂𑐰𑐵𑐥𑐹</Link>)
             </p>
             <p className="text-gray-700 mt-2 text-justify">
-              𑐕𑐴𑑂𑐩 𑐩𑐾𑐴𑑂𑐩 ‘𑐩𑐾𑐟𑐵𑐖𑐶’ 𑐩𑐏𑐸, 𑐳𑑂𑐟𑐾𑐮𑐵𑐬 𑐀𑐣𑐮𑐵𑐂𑐣 : (<Link href="https://studioiridium.wixsite.com/magazine/post/rukshana-kapali-not-another-other" className="font-bold text-[#195f2b] hover:opacity-70 hover:transition hover:duration-500">𑐳𑑂𑐰𑐵𑐥𑐹</Link>)
+              <strong>𑐕𑐴𑑂𑐩 𑐩𑐾𑐴𑑂𑐩 ‘𑐩𑐾𑐟𑐵𑐖𑐶’ 𑐩𑐏𑐸, 𑐳𑑂𑐟𑐾𑐮𑐵𑐬 𑐀𑐣𑐮𑐵𑐂𑐣</strong> : (<Link href="https://studioiridium.wixsite.com/magazine/post/rukshana-kapali-not-another-other" className="font-bold text-[#195f2b] hover:opacity-70 hover:transition hover:duration-500">𑐳𑑂𑐰𑐵𑐥𑐹</Link>)
             </p>
             <p className="text-gray-700 mt-2 text-justify">
-              𑐣𑐾𑐥𑐵𑑅𑐫𑐵 𑐎𑑂𑐰𑐫𑑂‌𑐮𑐩𑐶 𑐴𑑂𑐣𑑂𑐫𑐵𑑅𑐳𑐣𑐵𑐫𑑂 𑐠𑐵𑐟𑑄𑐡𑐧𑐹 𑐳𑐒𑑂𑐎𑐾𑐐𑐸 𑐎𑐸𑐟𑑅, 𑐳𑐸𑐡𑑂𑐢𑐳𑐵𑐬 :  (<Link href="https://shuddhashar.com/shaking-up-the-status-quo-in-nepals-queer-movement-mallika-aryal/" className="font-bold text-[#195f2b] hover:opacity-70 hover:transition hover:duration-500">𑐳𑑂𑐰𑐵𑐥𑐹</Link>)
+              <strong>𑐣𑐾𑐥𑐵𑑅𑐫𑐵 𑐎𑑂𑐰𑐫𑑂‌𑐮𑐩𑐶 𑐴𑑂𑐣𑑂𑐫𑐵𑑅𑐳𑐣𑐵𑐫𑑂 𑐠𑐵𑐟𑑄𑐡𑐧𑐹 𑐳𑐒𑑂𑐎𑐾𑐐𑐸 𑐎𑐸𑐟𑑅, 𑐳𑐸𑐡𑑂𑐢𑐳𑐵𑐬</strong> :  (<Link href="https://shuddhashar.com/shaking-up-the-status-quo-in-nepals-queer-movement-mallika-aryal/" className="font-bold text-[#195f2b] hover:opacity-70 hover:transition hover:duration-500">𑐳𑑂𑐰𑐵𑐥𑐹</Link>)
             </p>
           </div>
 
