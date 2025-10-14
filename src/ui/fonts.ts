@@ -1,4 +1,4 @@
-import { Alegreya_Sans, Alegreya_Sans_SC, Noto_Sans_Newa, Noto_Serif_Devanagari, Roboto  } from "next/font/google";
+import { Alegreya_Sans, Alegreya_Sans_SC, Noto_Sans_Newa, Noto_Serif_Devanagari, Roboto, Lato  } from "next/font/google";
 
 // Fonts 
 export const alegreyaSans = Alegreya_Sans({
@@ -27,4 +27,10 @@ export const roboto = Roboto({
     subsets: ['latin'],
     style: ['normal', 'italic'],
     weight: ['400', '500', '700'],
+});
+
+export const lato = Lato({
+    subsets: ['latin'],
+    style: ['normal', 'italic'],
+    weight: ['300', '400', '700', '900']
 });

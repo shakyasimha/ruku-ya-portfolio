@@ -4,6 +4,8 @@ import Footer from "@/components/Footer";
 import { nepalSambat, nepalSambatLatin } from "@/lib/fetchYear";
 import Link from "next/link";
 
+import Navbar from "@/components/Navbar";
+
 // Metadata
 export const metadata = {
     title: 'My Introduction - Rukshana Kapali'
@@ -13,8 +15,19 @@ export const metadata = {
 export default function Home() {
   const year = 'N.S. ' + nepalSambatLatin(nepalSambat());
 
+  const navItems = [
+    { label: 'Home', href: 'home' },
+    { label: 'About', href: 'about' },
+    { label: 'Services', href: 'services' },
+    { label: 'Contact', href: 'contact' },
+  ]
+
   return (
     <div className="flex flex-col min-h-screen">
+      <Navbar 
+        navItems={navItems} 
+      />
+
       <Header title="Rukshana Kapali"/>
 
       {/* Horizontal divider section */}
