@@ -5,6 +5,7 @@ import { nepalSambat, nepalSambatLatin } from "@/lib/fetchYear";
 import Link from "next/link";
 
 import Navbar from "@/components/Navbar";
+import Profile from "@/components/Profile";
 
 // Metadata
 export const metadata = {
@@ -23,12 +24,12 @@ export default function Home() {
   ]
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-[#f7f7f7]">
       <Navbar 
         navItems={navItems} 
       />
 
-      <Header title="Rukshana Kapali"/>
+      <Profile title="Rukshana Kapali"/>
 
       {/* Horizontal divider section */}
       <hr className="mx-auto w-1/2 border-t border-gray-300 mt-8" />

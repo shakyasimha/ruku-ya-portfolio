@@ -23,7 +23,7 @@ export default function Navbar({ navItems }: NavbarProps) {
     };
 
     return (
-        <nav className="fixed top-0 w-full bg-[#f7f7f7] text-gray-800 p-4 shadow-md z-50">
+        <nav className="fixed top-0 w-full bg-[#f7f7f7] text-gray-800 p-4 z-50">
             <ul className={`${lato.className} flex justify-center gap-8`}>
                 {navItems.map((item) => (
                     <li key={item.href}> 
