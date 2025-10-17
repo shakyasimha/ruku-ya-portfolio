@@ -19,8 +19,9 @@ export default function Home() {
   const navItems = [
     { label: 'Home', href: 'home' },
     { label: 'About', href: 'about' },
-    { label: 'Services', href: 'services' },
-    { label: 'Contact', href: 'contact' },
+    { label: 'Experiences', href: 'experiences' },
+    { label: 'Publications', href: 'publication' },
+    { label: 'Advocacy & Litigation', href: 'advocacy'}
   ]
 
   return (
@@ -29,7 +30,10 @@ export default function Home() {
         navItems={navItems} 
       />
 
-      <Profile title="Rukshana Kapali"/>
+      {/* Home section */}
+      <div id="home">
+        <Profile />
+      </div>
 
       {/* Horizontal divider section */}
       <hr className="mx-auto w-1/2 border-t border-gray-300 mt-8" />
@@ -37,10 +41,10 @@ export default function Home() {
       {/* Content section */}
       <div className="flex flex-col md:flex-row gap-6 p-4 max-w-4xl mx-auto mt-8">
         {/* About Me section */}
-        <div className={`${roboto.className} flex-1 md:mr-4 mx-4`}>
+        <div className={`${roboto.className} text-center flex-1 md:mr-4 mx-4`}>
           {/* About Me */}
-          <div>
-            <h2 className={`${alegreyaSans.className} mb-4 text-2xl font-bold text-red-700 md:text-start text-center`}>About Me</h2>
+          <div id="about">
+            <h2 className={`${alegreyaSans.className} mb-4 text-2xl font-bold text-red-700 text-center`}>About Me</h2>
             <p className="text-gray-700 mt-2 text-justify">
               My interest and work involves Language, Linguistics, Newa issues, Nepala Bhasa, Law, and SOGIESC issues. I engage in knowledge production through research, awareness toolkit publications, academic writing, and so on. I also engage in policy and legal issues, in which I mostly center on litigation. <br />
             </p>

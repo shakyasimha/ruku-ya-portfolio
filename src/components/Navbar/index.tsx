@@ -11,14 +11,21 @@ interface NavItem {
 
 interface NavbarProps {
     navItems: NavItem[];
+    offset?: number;
 }
 
-export default function Navbar({ navItems }: NavbarProps) {
+export default function Navbar({ navItems, offset = 80 }: NavbarProps) {
     const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
         e.preventDefault();
         const element = document.getElementById(targetId);
         if(element) {
-            element.scrollIntoView({ behavior: 'smooth' });
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
         }
     };
 
