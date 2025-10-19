@@ -1349,23 +1349,7 @@ export default function Home() {
       </div>
 
       {/* Footer section */}
-      <Footer
-        info={{
-          headerClassName: alegreyaSC.className,
-          className: alegreyaSans.className,
-          name: "Rukshana Kapali",
-          profileLink: "",
-          litigationLink: "",
-          publicationLink: "",
-          locationHeader: "Location",
-          location: "Lalitpur, Nepal",
-          emailHeader: "Email",
-          email: "rukshanakapali1144@gmail.com",
-          phoneHeader: "Phone",
-          phone: "+977-9808262699",
-          year: year,
-        }}
-      />
+      <Footer lang="new" />
     </div>
   );
 }

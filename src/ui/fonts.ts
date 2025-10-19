@@ -7,7 +7,23 @@ import {
   Noto_Sans_Newa,
 } from "next/font/google";
 
+import localFont from "next/font/local";
+
 // Fonts
+export const nithyaRanjana = localFont({
+  src: [
+    {
+      path: "../../public/fonts/NithyaRanjanaDU-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    // {
+    //   path: "/fonts/NithyaRDanjana-Bold.otf",
+    //   weight: "700",
+    // },
+  ],
+});
+
 export const alegreyaSans = Alegreya_Sans({
   weight: ["400", "500", "700"],
   style: ["normal", "italic"],
