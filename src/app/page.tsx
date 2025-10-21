@@ -8,7 +8,7 @@ import Profile from "@/components/Profile";
 
 // Metadata
 export const metadata = {
-  title: "My Introduction - Rukshana Kapali",
+  title: "Rukshana Kapali",
 };
 
 // Main component
