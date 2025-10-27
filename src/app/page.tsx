@@ -1,16 +1,20 @@
+// Font imports here
 import {
   alegreyaSans,
-  alegreyaSC,
   nithyaRanjana,
   notoSerifDevanagari,
   roboto,
 } from "@/ui/fonts";
-import Footer from "@/components/Footer";
+
+// Importing other Next.js components here
 // import { nepalSambat, nepalSambatLatin } from "@/lib/fetchYear";
 import Link from "next/link";
 
+// Importing components here
 import Navbar from "@/components/Navbar";
 import Profile from "@/components/Profile";
+import Footer from "@/components/Footer";
+import MdxContent from "@/components/MdxContent";
 
 // Metadata
 export const metadata = {
@@ -59,7 +63,7 @@ export default function Home() {
 
       {/* Home section */}
       <div id="home">
-        <Profile lang="en" />
+        <Profile lang="new" />
       </div>
 
       {/* Horizontal divider section */}
@@ -75,6 +79,10 @@ export default function Home() {
             >
               {headerItems["new"].aboutSection}
             </h2>
+
+            <div>
+              <MdxContent section="about" lang="en" />
+            </div>
           </div>
 
           {/* Experiences */}
@@ -107,7 +115,7 @@ export default function Home() {
       </div>
 
       {/* Footer section */}
-      <Footer lang="en" />
+      <Footer lang="new" />
     </div>
   );
 }

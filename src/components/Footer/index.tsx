@@ -72,8 +72,10 @@ export default function Footer({ lang = "new" }: FooterProps) {
       <div className="max-w-4xl mx-auto flex flex-col md:flex-row w-full items-center">
         {/* Name */}
         <div className="flex-1 flex flex-col py-4 gap-2 sm:m-0 m-4">
-          <span className={`${font.header} text-4xl text-red-700`}>
-            <strong>{info.name}</strong>
+          <span
+            className={`${font.header} ${lang === "new" ? "" : "font-bold"} text-4xl text-red-700`}
+          >
+            {info.name}
           </span>
         </div>
 
@@ -90,7 +92,7 @@ export default function Footer({ lang = "new" }: FooterProps) {
             <h2 className="font-bold min-w-[120px]">{info.emailHeader}</h2>
             <Link
               href={`mailto:${info.email}`}
-              className="hover:opacity-60 hover:transition hover:duration-400"
+              className={`${alegreyaSans.className} hover:opacity-60 hover:transition hover:duration-400`}
             >
               {info.email}
             </Link>
