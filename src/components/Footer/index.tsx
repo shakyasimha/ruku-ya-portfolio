@@ -63,7 +63,7 @@ type FooterProps = {
   lang?: "en" | "ne" | "new";
 };
 
-export default function Footer({ lang = "en" }: FooterProps) {
+export default function Footer({ lang = "new" }: FooterProps) {
   const info = footerContent[lang];
   const font = fonts[lang];
 
@@ -72,7 +72,7 @@ export default function Footer({ lang = "en" }: FooterProps) {
       <div className="max-w-4xl mx-auto flex flex-col md:flex-row w-full items-center">
         {/* Name */}
         <div className="flex-1 flex flex-col py-4 gap-2 sm:m-0 m-4">
-          <span className={`${font.header} text-3xl font-bold text-red-700`}>
+          <span className={`${font.header} text-4xl text-red-700`}>
             <strong>{info.name}</strong>
           </span>
         </div>

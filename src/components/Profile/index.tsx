@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { alegreyaSC, nithyaRanjana, notoSerifDevanagari } from "@/ui/fonts";
 
 // interface HeaderProps {
@@ -22,7 +21,13 @@ const title = {
   },
 };
 
-export default function Profile() {
+type HeaderProps = {
+  lang?: "en" | "ne" | "new";
+};
+
+export default function Profile({ lang = "new" }: HeaderProps) {
+  const titleContent = title[lang];
+
   return (
     <div className="flex flex-col bg-[#f7f7f7] md:flex-row items-center mt-64 px-4 w-full max-w-4xl mx-auto">
       {/* Profile picture - appears first on mobile, second on desktop */}
@@ -38,8 +43,8 @@ export default function Profile() {
       {/* Title - appears second on mobile, first on desktop */}
       <div className="flex flex-col items-center justify-between w-full mt-4 md:mt-8 md:order-1">
         <div className="text-center md:text-left">
-          <h1 className={`${title["new"].font} text-4xl`}>
-            <strong>{title["new"].text}</strong>
+          <h1 className={`${titleContent.font} text-5xl`}>
+            <strong>{titleContent.text}</strong>
           </h1>
         </div>
       </div>
