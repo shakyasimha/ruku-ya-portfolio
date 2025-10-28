@@ -18,7 +18,7 @@ export const footerContent = {
     phoneHeader: "Phone",
     phone: "+977 9808262699",
     footerName: "Rukshana Kapali",
-    year: new Date().getFullYear(),
+    year: "1146",
   },
   ne: {
     name: "रुक्शना कपाली",
@@ -29,7 +29,7 @@ export const footerContent = {
     phoneHeader: "सम्पर्क",
     phone: "+९७७ ९८०८२६२६९९",
     footerName: "रुक्शना कपाली",
-    year: new Date().getFullYear(),
+    year: "११४६",
   },
   new: {
     name: "रुक्शना कपाली",
@@ -40,7 +40,7 @@ export const footerContent = {
     phoneHeader: "𑐫𑐵𑑄𑐨𑐵𑐫𑑂 𑐮𑑂𑐫𑐵𑑅",
     phone: "+𑑙𑑗𑑗 𑑙𑑘𑑐𑑘𑑒𑑖𑑒𑑖𑑙𑑙",
     footerName: "𑐬𑐸𑐎𑑂𑐳𑐣𑐵 𑐎𑐥𑐵𑐮𑐶",
-    year: new Date().getFullYear(),
+    year: "𑑑𑑑𑑔𑑖",
   },
 };
 

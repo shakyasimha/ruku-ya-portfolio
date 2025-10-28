@@ -2,13 +2,15 @@
 import {
   alegreyaSans,
   nithyaRanjana,
+  notoSansDevanagari,
   notoSerifDevanagari,
   roboto,
 } from "@/ui/fonts";
 
+import { Metadata } from "next";
 // Importing other Next.js components here
 // import { nepalSambat, nepalSambatLatin } from "@/lib/fetchYear";
-import Link from "next/link";
+// import Link from "next/link";
 
 // Importing components here
 import Navbar from "@/components/Navbar";
@@ -17,7 +19,7 @@ import Footer from "@/components/Footer";
 import MdxContent from "@/components/MdxContent";
 
 // Metadata
-export const metadata = {
+export const metadata: Metadata = {
   title: "Rukshana Kapali",
 };
 
@@ -46,10 +48,25 @@ const headerItems = {
   },
   new: {
     headerFont: nithyaRanjana.className,
-    aboutSection: "मेरो परिचय",
+    aboutSection: "जिगु म्हसिइका",
     experiencesSection: "अनुभव",
     publicationsSection: "प्रकाशन",
     advocacySection: "वकालत र मुद्दाहरू",
+  },
+};
+
+const font = {
+  en: {
+    headerFont: alegreyaSans.className,
+    bodyFont: roboto.className,
+  },
+  ne: {
+    headerFont: notoSerifDevanagari.className,
+    bodyFont: notoSansDevanagari.className,
+  },
+  new: {
+    headerFont: nithyaRanjana.className,
+    bodyFont: roboto.className,
   },
 };
 
@@ -75,20 +92,22 @@ export default function Home() {
           {/* About Me */}
           <div id="about">
             <h2
-              className={`${headerItems["new"].headerFont} mb-4 text-3xl text-red-700 text-center`}
+              className={`${font["new"].headerFont} mb-4 text-3xl text-red-700 text-center`}
             >
               {headerItems["new"].aboutSection}
             </h2>
 
-            <div>
-              <MdxContent section="about" lang="en" />
+            <div
+              className={`${font["new"].bodyFont} prose prose-gray max-w-none text-justify text-gray-700 [&_p]:mb-4`}
+            >
+              <MdxContent section="about" lang="new" />
             </div>
           </div>
 
           {/* Experiences */}
-          <div about="experiences">
+          <div id="experiences">
             <h2
-              className={`${headerItems["new"].headerFont} mt-8 mb-4 text-3xl text-red-700 text-center`}
+              className={`${font["new"].headerFont} mt-8 mb-4 text-3xl text-red-700 text-center`}
             >
               {headerItems["new"].experiencesSection}
             </h2>
@@ -97,16 +116,16 @@ export default function Home() {
           {/* Publications */}
           <div id="publications">
             <h2
-              className={`${headerItems["new"].headerFont} mt-8 mb-4 text-3xl text-red-700 text-center`}
+              className={`${font["new"].headerFont} mt-8 mb-4 text-3xl text-red-700 text-center`}
             >
               {headerItems["new"].publicationsSection}
             </h2>
           </div>
 
           {/* Advocacy and Litigations */}
-          <div id="publications">
+          <div id="advocacy">
             <h2
-              className={`${headerItems["new"].headerFont} mt-8 mb-4 text-3xl  text-red-700 text-center`}
+              className={`${font["new"].headerFont} mt-8 mb-4 text-3xl  text-red-700 text-center`}
             >
               {headerItems["new"].advocacySection}
             </h2>

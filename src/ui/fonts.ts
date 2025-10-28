@@ -275,3 +275,20 @@ export const roboto = localFont({
   ],
   display: "swap",
 });
+
+/* Tiro Devanagari Sanskrit */
+export const tiroDevanagariSanskrit = localFont({
+  src: [
+    {
+      path: "./../../public/fonts/Tiro_Devanagari_Sanskrit/TiroDevanagariSanskrit-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./../../public/fonts/Tiro_Devanagari_Sanskrit/TiroDevanagariSanskrit-Italic.ttf",
+      weight: "400",
+      style: "italic",
+    },
+  ],
+  display: "swap",
+});
