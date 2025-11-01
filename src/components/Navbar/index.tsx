@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import LanguageSwitcher from "../LanguageSwitcher";
 
 type NavItem = {
   label: string;
@@ -44,7 +45,7 @@ export default function Navbar({ navItems }: NavbarProps) {
       {/* Desktop Navbar */}
       <nav className="hidden md:flex fixed top-0 left-0 right-0 bg-[#f7f7f7] z-50">
         <div className="max-w-4xl mx-auto w-full px-4">
-          <ul className="flex justify-center gap-8 py-4">
+          <ul className="flex items-center justify-center gap-8 py-4">
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link
@@ -56,6 +57,11 @@ export default function Navbar({ navItems }: NavbarProps) {
                 </Link>
               </li>
             ))}
+
+            {/* Language switcher right next to links */}
+            <li>
+              <LanguageSwitcher />
+            </li>
           </ul>
         </div>
       </nav>
@@ -63,6 +69,9 @@ export default function Navbar({ navItems }: NavbarProps) {
       {/* Mobile Navbar */}
       <nav className="md:hidden fixed top-0 left-0 right-0 bg-[#f7f7f7] z-50">
         <div className="flex justify-end items-center px-4 py-4">
+          {/* Language switcher */}
+          <LanguageSwitcher />
+
           {/* Burger Icon */}
           <button
             onClick={toggleMenu}
