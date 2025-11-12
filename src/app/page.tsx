@@ -80,7 +80,7 @@ export default function Home() {
 
       {/* Home section */}
       <div id="home">
-        <Profile lang="new" />
+        <Profile lang="en" />
       </div>
 
       {/* Horizontal divider section */}
@@ -92,20 +92,20 @@ export default function Home() {
           {/* About Me */}
           <div id="about">
             <h2
-              className={`${font["new"].headerFont} mb-4 text-3xl text-red-700 text-center`}
+              className={`${font["en"].headerFont} mb-4 text-3xl text-red-700 text-center`}
             >
-              {headerItems["new"].aboutSection}
+              {headerItems["en"].aboutSection}
             </h2>
 
             <div
               className={`${font["new"].bodyFont} prose prose-gray max-w-none text-justify text-gray-700 [&_p]:mb-4`}
             >
-              <MdxContent section="about" lang="new" />
+              <MdxContent section="about" lang="en" />
             </div>
           </div>
 
           {/* Experiences */}
-          <div id="experiences">
+          <div id="ex
             <h2
               className={`${font["new"].headerFont} mt-8 mb-4 text-3xl text-red-700 text-center`}
             >
