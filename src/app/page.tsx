@@ -73,6 +73,7 @@ const font = {
 // Main component
 export default function Home() {
   // const year = "N.S. " + nepalSambatLatin(nepalSambat());
+  const lang = "en";
 
   return (
     <div className="flex flex-col min-h-screen bg-[#f7f7f7]">
@@ -80,7 +81,7 @@ export default function Home() {
 
       {/* Home section */}
       <div id="home">
-        <Profile lang="en" />
+        <Profile lang={lang} />
       </div>
 
       {/* Horizontal divider section */}
@@ -92,49 +93,49 @@ export default function Home() {
           {/* About Me */}
           <div id="about">
             <h2
-              className={`${font["en"].headerFont} mb-4 text-3xl text-red-700 text-center`}
+              className={`${font[lang].headerFont} ${lang == "new" ? "" : "font-bold"} mb-4 text-3xl text-red-700 text-center`}
             >
-              {headerItems["en"].aboutSection}
+              {headerItems[lang].aboutSection}
             </h2>
 
             <div
-              className={`${font["new"].bodyFont} prose prose-gray max-w-none text-justify text-gray-700 [&_p]:mb-4`}
+              className={`${font[lang].bodyFont} prose prose-gray max-w-none text-justify text-gray-700 [&_p]:mb-4`}
             >
-              <MdxContent section="about" lang="en" />
+              <MdxContent section="about" lang={lang} />
             </div>
           </div>
 
           {/* Experiences */}
-          <div id="ex
+          <div id="experiences">
             <h2
-              className={`${font["new"].headerFont} mt-8 mb-4 text-3xl text-red-700 text-center`}
+              className={`${font[lang].headerFont} ${lang == "new" ? "" : "font-bold"} mt-8 mb-4 text-3xl text-red-700 text-center`}
             >
-              {headerItems["new"].experiencesSection}
+              {headerItems[lang].experiencesSection}
             </h2>
           </div>
 
           {/* Publications */}
           <div id="publications">
             <h2
-              className={`${font["new"].headerFont} mt-8 mb-4 text-3xl text-red-700 text-center`}
+              className={`${font[lang].headerFont} ${lang == "new" ? "" : "font-bold"} mt-8 mb-4 text-3xl text-red-700 text-center`}
             >
-              {headerItems["new"].publicationsSection}
+              {headerItems[lang].publicationsSection}
             </h2>
           </div>
 
           {/* Advocacy and Litigations */}
           <div id="advocacy">
             <h2
-              className={`${font["new"].headerFont} mt-8 mb-4 text-3xl  text-red-700 text-center`}
+              className={`${font[lang].headerFont} ${lang == "new" ? "" : "font-bold"} mt-8 mb-4 text-3xl  text-red-700 text-center`}
             >
-              {headerItems["new"].advocacySection}
+              {headerItems[lang].advocacySection}
             </h2>
           </div>
         </div>
       </div>
 
       {/* Footer section */}
-      <Footer lang="new" />
+      <Footer lang={lang} />
     </div>
   );
 }
