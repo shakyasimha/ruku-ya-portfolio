@@ -17,6 +17,7 @@ import Navbar from "@/components/Navbar";
 import Profile from "@/components/Profile";
 import Footer from "@/components/Footer";
 import MdxContent from "@/components/MdxContent";
+import Tabs from "@/components/Tabs";
 
 // Metadata
 export const metadata: Metadata = {
@@ -112,6 +113,8 @@ export default function Home() {
             >
               {headerItems[lang].experiencesSection}
             </h2>
+
+            <Tabs lang="en" />
           </div>
 
           {/* Publications */}
