@@ -1,7 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { GraduationCap, Briefcase, Users, Award, Trophy } from "lucide-react";
+import {
+  GraduationCap,
+  Briefcase,
+  Users,
+  Award,
+  Trophy,
+  Languages,
+} from "lucide-react";
 
 type langProps = {
   lang?: "en" | "ne" | "new";
@@ -56,6 +63,16 @@ export default function Tabs({ lang = "en" }: langProps) {
       label: {
         en: "Awards",
         ne: "",
+        new: "",
+      },
+      content: "Awards content here",
+    },
+    {
+      id: 5,
+      icon: Languages,
+      label: {
+        en: "Languages",
+        ne: "भाषा",
         new: "",
       },
       content: "Awards content here",
