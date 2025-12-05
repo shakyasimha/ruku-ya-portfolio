@@ -1,4 +1,3 @@
-// Font imports here
 import {
   alegreyaSans,
   nithyaRanjana,
