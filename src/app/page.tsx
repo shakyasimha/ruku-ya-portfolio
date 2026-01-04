@@ -1,3 +1,5 @@
+"use client";
+
 import {
   alegreyaSans,
   nithyaRanjana,
@@ -10,6 +12,7 @@ import { Metadata } from "next";
 // Importing other Next.js components here
 // import { nepalSambat, nepalSambatLatin } from "@/lib/fetchYear";
 // import Link from "next/link";
+import { useLanguage } from "@/lib/languageContext";
 
 // Importing components here
 import Navbar from "@/components/Navbar";
@@ -17,11 +20,6 @@ import Profile from "@/components/Profile";
 import Footer from "@/components/Footer";
 import MdxContent from "@/components/MdxContent";
 import Tabs from "@/components/Tabs";
-
-// Metadata
-export const metadata: Metadata = {
-  title: "Rukshana Kapali",
-};
 
 const navItems = [
   { label: "Home", href: "home" },
@@ -73,7 +71,7 @@ const font = {
 // Main component
 export default function Home() {
   // const year = "N.S. " + nepalSambatLatin(nepalSambat());
-  const lang = "en";
+  const { lang } = useLanguage();
 
   return (
     <div className="flex flex-col min-h-screen bg-[#f7f7f7]">
