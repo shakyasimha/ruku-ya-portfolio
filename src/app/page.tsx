@@ -39,9 +39,9 @@ const headerItems = {
   new: {
     headerFont: nithyaRanjana.className,
     aboutSection: "जिगु म्हसिइका",
-    experiencesSection: "अनुभव",
+    experiencesSection: "न्वखं",
     publicationsSection: "प्रकाशन",
-    advocacySection: "वकालत र मुद्दाहरू",
+    advocacySection: "वकालत व मुद्दा",
   },
 };
 
@@ -103,7 +103,7 @@ export default function Home() {
               {headerItems[lang].experiencesSection}
             </h2>
 
-            {/*<Tabs lang={lang} />*/}
+            <Tabs lang={lang} />
           </div>
 
           {/* Publications */}

@@ -9,12 +9,10 @@ import {
   Trophy,
   Languages,
 } from "lucide-react";
+import { useLanguage } from "@/lib/languageContext";
 
-type langProps = {
-  lang?: "en" | "ne" | "new";
-};
-
-export default function Tabs({ lang = "en" }: langProps) {
+export default function Tabs() {
+  const lang = useLanguage();
   const [activeTab, setActiveTab] = useState(0);
 
   const tabs = [
@@ -24,6 +22,7 @@ export default function Tabs({ lang = "en" }: langProps) {
       label: {
         en: "Academics",
         ne: "शिक्षा",
+        new: "",
       },
       content: "Education content here",
     },
@@ -75,28 +74,27 @@ export default function Tabs({ lang = "en" }: langProps) {
         ne: "भाषा",
         new: "",
       },
-      content: "Awards content here",
+      content: "Language content here",
     },
   ];
 
   return (
     <div className="w-full">
       {/* Tab Headers */}
-      <div className="flex justify-center">
+      <div className="grid grid-cols-3 md:flex md:justify-center gap-2">
         {tabs.map((tab) => {
-          const Icon = tab.icon; // Extract icon component
+          const Icon = tab.icon;
           return (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-6 py-3 flex flex-col items-center gap-2 transition-colors transition-800 ${
+              className={`px-2 md:px-6 py-3 flex flex-col items-center gap-2 transition-colors ${
                 activeTab === tab.id
                   ? "text-gray-800"
                   : "text-gray-500 hover:text-gray-900"
               }`}
             >
-              <Icon className="w-5 h-5" /> {/* Render as component */}
-              <span>{tab.label[lang]}</span>
+              <Icon className="w-5 h-5" />
             </button>
           );
         })}
