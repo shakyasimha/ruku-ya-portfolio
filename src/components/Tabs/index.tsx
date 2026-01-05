@@ -89,7 +89,7 @@ export default function Tabs({ lang = "en" }: langProps) {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-6 py-3 flex md:flex-col items-center gap-2 transition-colors transition-800 ${
+              className={`px-6 py-3 flex flex-col items-center gap-2 transition-colors transition-800 ${
                 activeTab === tab.id
                   ? "text-gray-800"
                   : "text-gray-500 hover:text-gray-900"

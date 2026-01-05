@@ -41,7 +41,7 @@ export default function Profile({ lang = "new" }: HeaderProps) {
       </div>
 
       {/* Title - appears second on mobile, first on desktop */}
-      <div className="flex flex-col items-center justify-between w-full mt-4 md:mt-8 md:order-1">
+      <div className="flex flex-col items-center justify-between w-full mt-12 md:mt-8 md:order-1">
         <div className="text-center md:text-left">
           <h1
             className={`${titleContent.font} ${lang === "new" ? "" : "font-bold"} text-5xl`}

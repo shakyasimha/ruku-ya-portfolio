@@ -1,10 +1,9 @@
 "use client";
 
 import { useLanguage } from "@/lib/languageContext";
-import { useState } from "react";
 
 const languageLabels = {
-  en: "EN",
+  en: "en",
   ne: "ने",
   new: "𑐣𑐾",
 };
@@ -22,7 +21,7 @@ export default function LanguageSwitcher() {
 
   return (
     <button
-      className="mx-2 my-2 px-2 py-2 rounded-xl bg-[#f7f7f7] text-gray-700 font-medium hover:bg-gray-400 hover:text-[#f7f7f7] transition duration-500"
+      className="mx-2 my-2 px-2 py-2 w-12 flex items-center justify-center rounded-xl bg-white border-2 border-gray-300 text-gray-700 font-medium hover:border-red-700 hover:text-red-700 transition duration-300"
       onClick={handleClick}
     >
       {languageLabels[lang]}

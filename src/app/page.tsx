@@ -21,14 +21,6 @@ import Footer from "@/components/Footer";
 import MdxContent from "@/components/MdxContent";
 import Tabs from "@/components/Tabs";
 
-const navItems = [
-  { label: "Home", href: "home" },
-  { label: "About", href: "about" },
-  { label: "Experiences", href: "experiences" },
-  { label: "Publications", href: "publication" },
-  { label: "Advocacy & Litigation", href: "advocacy" },
-];
-
 const headerItems = {
   en: {
     headerFont: alegreyaSans.className,
@@ -75,7 +67,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen bg-[#f7f7f7]">
-      <Navbar navItems={navItems} />
+      <Navbar />
 
       {/* Home section */}
       <div id="home">
@@ -111,7 +103,7 @@ export default function Home() {
               {headerItems[lang].experiencesSection}
             </h2>
 
-            <Tabs lang="en" />
+            {/*<Tabs lang={lang} />*/}
           </div>
 
           {/* Publications */}

@@ -3,18 +3,54 @@
 import { useState } from "react";
 import Link from "next/link";
 import LanguageSwitcher from "../LanguageSwitcher";
+import { useLanguage } from "@/lib/languageContext";
 
-type NavItem = {
-  label: string;
-  href: string;
-};
+const navItems = [
+  {
+    label: {
+      en: "Home",
+      ne: "गृहपृष्ठ",
+      new: "𑐕𑐾𑑄𑐥𑐄",
+    },
+    href: "home",
+  },
+  {
+    label: {
+      en: "About",
+      ne: "परिचय",
+      new: "𑐩𑑂𑐴𑐳𑐶𑐂𑐎𑐵",
+    },
+    href: "about",
+  },
+  {
+    label: {
+      en: "Experiences",
+      ne: "अनुभव",
+      new: "𑐣𑑂𑐰𑐏𑑄",
+    },
+    href: "experiences",
+  },
+  {
+    label: {
+      en: "Publications",
+      ne: "प्रकाशन",
+      new: "𑐥𑑂𑐬𑐎𑐵𑐱𑐣",
+    },
+    href: "publication",
+  },
+  {
+    label: {
+      en: "Advocacy & Litigation",
+      ne: "वकालत र मुद्दा",
+      new: "𑐰𑐎𑐵𑐮𑐟 𑐰 𑐩𑐸𑐡𑑂𑐡𑐵",
+    },
+    href: "advocacy",
+  },
+];
 
-type NavbarProps = {
-  navItems: NavItem[];
-};
-
-export default function Navbar({ navItems }: NavbarProps) {
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { lang } = useLanguage(); // Get current language from context
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
@@ -53,7 +89,7 @@ export default function Navbar({ navItems }: NavbarProps) {
                   onClick={(e) => handleScroll(e, item.href)}
                   className="text-gray-700 hover:text-red-700 transition-colors duration-200"
                 >
-                  {item.label}
+                  {item.label[lang]}
                 </Link>
               </li>
             ))}
@@ -150,7 +186,7 @@ export default function Navbar({ navItems }: NavbarProps) {
                 onClick={(e) => handleScroll(e, item.href)}
                 className="text-lg text-gray-700 hover:text-red-700 transition-colors duration-200 block"
               >
-                {item.label}
+                {item.label[lang]}
               </Link>
             </li>
           ))}
