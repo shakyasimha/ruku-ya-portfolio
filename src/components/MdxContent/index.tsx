@@ -1,13 +1,14 @@
 "use client";
 
+import { useLanguage } from "@/lib/languageContext";
 import { mdxContent } from "@/content";
 
 type MdxContentProps = {
-  section: keyof typeof mdxContent;
-  lang: "en" | "ne" | "new";
+  section: string; // e.g., "academics", "work", "affiliations", etc.
 };
 
-export default function MdxContent({ section, lang }: MdxContentProps) {
+export default function MdxContent({ section }: MdxContentProps) {
+  const { lang } = useLanguage();
   const Content = mdxContent[section][lang];
   return <Content />;
 }

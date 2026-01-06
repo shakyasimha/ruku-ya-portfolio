@@ -8,7 +8,6 @@ import {
   roboto,
 } from "@/ui/fonts";
 
-import { Metadata } from "next";
 // Importing other Next.js components here
 // import { nepalSambat, nepalSambatLatin } from "@/lib/fetchYear";
 // import Link from "next/link";
@@ -19,6 +18,7 @@ import Navbar from "@/components/Navbar";
 import Profile from "@/components/Profile";
 import Footer from "@/components/Footer";
 import MdxContent from "@/components/MdxContent";
+import MdxCardDisplay from "@/components/MdxCardDisplay";
 import Tabs from "@/components/Tabs";
 
 const headerItems = {
@@ -91,7 +91,7 @@ export default function Home() {
             <div
               className={`${font[lang].bodyFont} prose prose-gray max-w-none text-justify text-gray-700 [&_p]:mb-4`}
             >
-              <MdxContent section="about" lang={lang} />
+              <MdxContent section="about" />
             </div>
           </div>
 
@@ -103,7 +103,8 @@ export default function Home() {
               {headerItems[lang].experiencesSection}
             </h2>
 
-            <Tabs lang={lang} />
+            <Tabs />
+            <MdxCardDisplay section="work" />
           </div>
 
           {/* Publications */}
