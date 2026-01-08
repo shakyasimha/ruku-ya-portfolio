@@ -29,15 +29,18 @@ export default function MdxCardDisplay({ section }: MdxCardDisplayProps) {
         setLoading(true);
         setError(null);
 
-        // Fetch the MDX file based on language and section
-        const response = await fetch(`/content/${lang}/${section}.mdx`);
+        // Fetch from API route
+        const response = await fetch(
+          `/api/mdx-content?section=${section}&lang=${lang}`,
+        );
 
         if (!response.ok) {
-          throw new Error(`Failed to load content: ${lang}/${section}.mdx`);
+          const errorData = await response.json();
+          throw new Error(errorData.error || "Failed to load content");
         }
 
-        const text = await response.text();
-        setContent(text);
+        const data = await response.json();
+        setContent(data.content);
       } catch (err) {
         console.error("Error loading content:", err);
         setError(err instanceof Error ? err.message : "Failed to load content");
