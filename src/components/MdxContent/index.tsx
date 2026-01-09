@@ -4,7 +4,7 @@ import { useLanguage } from "@/lib/languageContext";
 import { mdxContent } from "@/content";
 
 type MdxContentProps = {
-  section: string; // e.g., "academics", "work", "affiliations", etc.
+  section: keyof typeof mdxContent; // Type-safe section prop
 };
 
 export default function MdxContent({ section }: MdxContentProps) {
