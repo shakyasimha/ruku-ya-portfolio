@@ -128,7 +128,9 @@ export default function Home() {
       </div>
 
       {/* Footer section */}
-      <Footer lang={lang} />
+      <div id="contact">
+        <Footer lang={lang} />
+      </div>
     </div>
   );
 }

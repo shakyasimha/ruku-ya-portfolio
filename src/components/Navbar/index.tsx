@@ -46,6 +46,14 @@ const navItems = [
     },
     href: "advocacy",
   },
+  {
+    label: {
+      en: "Contact Me",
+      ne: "सम्पर्क",
+      new: "सम्पर्क",
+    },
+    href: "contact",
+  },
 ];
 
 export default function Navbar() {
