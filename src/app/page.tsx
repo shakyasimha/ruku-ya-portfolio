@@ -18,7 +18,7 @@ import Navbar from "@/components/Navbar";
 import Profile from "@/components/Profile";
 import Footer from "@/components/Footer";
 import MdxContent from "@/components/MdxContent";
-import MdxCardDisplay from "@/components/MdxCardDisplay";
+// import MdxCardDisplay from "@/components/MdxCardDisplay";
 import Tabs from "@/components/Tabs";
 
 const headerItems = {
@@ -104,7 +104,7 @@ export default function Home() {
             </h2>
 
             <Tabs />
-            <MdxCardDisplay section="work" />
+            {/* <MdxCardDisplay section="work" /> */}
           </div>
 
           {/* Publications */}

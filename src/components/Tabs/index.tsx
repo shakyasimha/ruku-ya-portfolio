@@ -10,6 +10,7 @@ import {
   Languages,
 } from "lucide-react";
 import { useLanguage } from "@/lib/languageContext";
+import MdxCardDisplay from "@/components/MdxCardDisplay";
 
 export default function Tabs() {
   const lang = useLanguage();
@@ -24,7 +25,7 @@ export default function Tabs() {
         ne: "शिक्षा",
         new: "",
       },
-      content: "Education content here",
+      content: "academics",
     },
     {
       id: 1,
@@ -34,7 +35,7 @@ export default function Tabs() {
         ne: "पेशागत अनुभव",
         new: "",
       },
-      content: "Work experience content here",
+      content: "work",
     },
     {
       id: 2,
@@ -44,7 +45,7 @@ export default function Tabs() {
         ne: "",
         new: "",
       },
-      content: "Affiliations content here",
+      content: "affiliations",
     },
     {
       id: 3,
@@ -54,7 +55,7 @@ export default function Tabs() {
         ne: "",
         new: "",
       },
-      content: "Fellowships content here",
+      content: "fellowship",
     },
     {
       id: 4,
@@ -64,7 +65,7 @@ export default function Tabs() {
         ne: "",
         new: "",
       },
-      content: "Awards content here",
+      content: "awards",
     },
     {
       id: 5,
@@ -74,7 +75,7 @@ export default function Tabs() {
         ne: "भाषा",
         new: "",
       },
-      content: "Language content here",
+      content: "language",
     },
   ];
 
@@ -101,7 +102,7 @@ export default function Tabs() {
       </div>
 
       {/* Tab Content */}
-      <div className="p-6">{tabs[activeTab].content}</div>
+      <MdxCardDisplay section={tabs[activeTab].content} />
     </div>
   );
 }
