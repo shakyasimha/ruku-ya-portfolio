@@ -2,6 +2,13 @@
 
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/lib/languageContext";
+import {
+  alegreyaSans,
+  nithyaRanjana,
+  notoSansDevanagari,
+  notoSerifDevanagari,
+  roboto,
+} from "@/ui/fonts";
 
 type Section = {
   header: string;
@@ -15,6 +22,21 @@ type Card = {
 
 type MdxCardDisplayProps = {
   section: string; // e.g., "academics", "work", "affiliations", etc.
+};
+
+const font = {
+  en: {
+    headerFont: alegreyaSans.className,
+    bodyFont: roboto.className,
+  },
+  ne: {
+    headerFont: notoSerifDevanagari.className,
+    bodyFont: notoSansDevanagari.className,
+  },
+  new: {
+    headerFont: nithyaRanjana.className,
+    bodyFont: roboto.className,
+  },
 };
 
 export default function MdxCardDisplay({ section }: MdxCardDisplayProps) {
@@ -146,6 +168,17 @@ export default function MdxCardDisplay({ section }: MdxCardDisplayProps) {
     return <span dangerouslySetInnerHTML={{ __html: processed }} />;
   }
 
+  // Render title with link support (for ### headers)
+  function renderTitle(title: string) {
+    // Handle markdown links [text](url)
+    const processed = title.replace(
+      /\[([^\]]+)\]\(([^)]+)\)/g,
+      '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-red-700 hover:text-red-800 underline transition-colors">$1</a>',
+    );
+
+    return <span dangerouslySetInnerHTML={{ __html: processed }} />;
+  }
+
   // Loading state
   if (loading) {
     return (
@@ -179,9 +212,9 @@ export default function MdxCardDisplay({ section }: MdxCardDisplayProps) {
   return (
     <div className="space-y-12">
       {sections.map((section, sectionIndex) => (
-        <div key={sectionIndex} className="space-y-6">
+        <div key={sectionIndex} className="space-y-6 mt-6 mb-6">
           {/* Section Header (## headers) */}
-          <h3 className="text-2xl font-bold text-red-700 text-center mb-6">
+          <h3 className={`${font[lang].headerFont} text-2xl font-bold text-red-700 text-center mb-6`}>
             {section.header}
           </h3>
 
@@ -192,13 +225,13 @@ export default function MdxCardDisplay({ section }: MdxCardDisplayProps) {
                 key={cardIndex}
                 className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:border-gray-300"
               >
-                {/* Card Title (### headers) - Bold */}
-                <h4 className="font-bold text-lg text-gray-900 mb-4 border-b border-gray-100 pb-2">
-                  {card.title}
+                {/* Card Title (### headers) - Bold with link support */}
+                <h4 className={`${font[lang].headerFont} font-bold text-lg text-gray-900 mb-4 border-b border-gray-100 pb-2`}>
+                  {renderTitle(card.title)}
                 </h4>
 
                 {/* Card Content - Each line on new line */}
-                <div className="space-y-2 text-gray-700 text-sm leading-relaxed">
+                <div className={`${font[lang].bodyFont} space-y-2 text-gray-700 text-sm leading-relaxed`}>
                   {card.content.map((line, lineIndex) => (
                     <div
                       key={lineIndex}
