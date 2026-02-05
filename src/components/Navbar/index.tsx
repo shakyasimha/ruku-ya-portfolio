@@ -36,16 +36,16 @@ const navItems = [
       ne: "प्रकाशन",
       new: "𑐥𑑂𑐬𑐎𑐵𑐱𑐣",
     },
-    href: "publication",
+    href: "publications",
   },
-  {
-    label: {
-      en: "Advocacy & Litigation",
-      ne: "वकालत र मुद्दा",
-      new: "𑐰𑐎𑐵𑐮𑐟 𑐰 𑐩𑐸𑐡𑑂𑐡𑐵",
-    },
-    href: "advocacy",
-  },
+  // {
+  //   label: {
+  //     en: "Advocacy & Litigation",
+  //     ne: "वकालत र मुद्दा",
+  //     new: "𑐰𑐎𑐵𑐮𑐟 𑐰 𑐩𑐸𑐡𑑂𑐡𑐵",
+  //   },
+  //   href: "advocacy",
+  // },
   {
     label: {
       en: "Contact Me",
