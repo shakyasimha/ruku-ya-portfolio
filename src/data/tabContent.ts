@@ -148,13 +148,13 @@ export const publicationTabs = [
     icon: University,
     label: {
       en: "Academic Papers",
-      ne: "शैक्षणिक लेख",
+      ne: "शैक्षणिक लेखन",
       new: "",
     },
     content: "publications",
     section: {
       en: "Academic Papers",
-      ne: "शैक्षणिक लेख",
+      ne: "शैक्षणिक लेखन",
       new: "",
     },
   },

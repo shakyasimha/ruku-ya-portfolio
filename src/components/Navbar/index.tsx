@@ -38,14 +38,6 @@ const navItems = [
     },
     href: "publications",
   },
-  // {
-  //   label: {
-  //     en: "Advocacy & Litigation",
-  //     ne: "वकालत र मुद्दा",
-  //     new: "𑐰𑐎𑐵𑐮𑐟 𑐰 𑐩𑐸𑐡𑑂𑐡𑐵",
-  //   },
-  //   href: "advocacy",
-  // },
   {
     label: {
       en: "Contact Me",
@@ -56,29 +48,57 @@ const navItems = [
   },
 ];
 
-export default function Navbar() {
+interface NavbarProps {
+  activeSection: string;
+  setActiveSection: (section: string) => void;
+}
+
+export default function Navbar({
+  activeSection,
+  setActiveSection,
+}: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const { lang } = useLanguage(); // Get current language from context
+  const { lang } = useLanguage();
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
-  const handleScroll = (
+  const handleNavClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
     href: string,
   ) => {
     e.preventDefault();
     closeMenu();
 
-    const element = document.getElementById(href);
-    if (element) {
-      const navbarHeight = 64; // Adjust based on your navbar height
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition =
-        elementPosition + window.pageYOffset - navbarHeight;
+    // Special handling for "Contact Me" - scroll to footer
+    if (href === "contact") {
+      const element = document.getElementById(href);
+      if (element) {
+        const navbarHeight = 64;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition =
+          elementPosition + window.pageYOffset - navbarHeight;
 
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    }
+    // Special handling for "Home" - scroll to top
+    else if (href === "home") {
       window.scrollTo({
-        top: offsetPosition,
+        top: 0,
+        behavior: "smooth",
+      });
+      setActiveSection("about"); // Default to showing About section
+    }
+    // For other sections, update active section
+    else {
+      setActiveSection(href);
+      // Scroll to top of content area smoothly
+      window.scrollTo({
+        top: 0,
         behavior: "smooth",
       });
     }
@@ -94,8 +114,14 @@ export default function Navbar() {
               <li key={item.href}>
                 <Link
                   href={`#${item.href}`}
-                  onClick={(e) => handleScroll(e, item.href)}
-                  className="text-gray-700 hover:text-red-700 transition-colors duration-200"
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  className={`transition-colors duration-200 ${
+                    activeSection === item.href &&
+                    item.href !== "home" &&
+                    item.href !== "contact"
+                      ? "text-gray-700 font-semibold"
+                      : "text-gray-500 hover:text-gray-700"
+                  }`}
                 >
                   {item.label[lang]}
                 </Link>
@@ -191,8 +217,14 @@ export default function Navbar() {
             <li key={item.href}>
               <Link
                 href={`#${item.href}`}
-                onClick={(e) => handleScroll(e, item.href)}
-                className="text-lg text-gray-700 hover:text-red-700 transition-colors duration-200 block"
+                onClick={(e) => handleNavClick(e, item.href)}
+                className={`text-lg transition-colors duration-200 block ${
+                  activeSection === item.href &&
+                  item.href !== "home" &&
+                  item.href !== "contact"
+                    ? "text-gray-700 font-semibold"
+                    : "text-gray-400 hover:text-gray-700"
+                }`}
               >
                 {item.label[lang]}
               </Link>

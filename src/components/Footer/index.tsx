@@ -12,7 +12,7 @@ export const footerContent = {
   en: {
     name: "Rukshana Kapali",
     locationHeader: "Location",
-    location: "Lalitpur, Nepal",
+    location: "Yala (Lalitpur), Nepal",
     emailHeader: "Email",
     email: "rukshanakapali1144@gmail.com",
     phoneHeader: "Phone",
@@ -23,7 +23,7 @@ export const footerContent = {
   ne: {
     name: "रुक्शना कपाली",
     locationHeader: "स्थान",
-    location: "ललितपुर, नेपाल",
+    location: "यल (ललितपुर), नेपाल",
     emailHeader: "इमेल",
     email: "rukshanakapali1144@gmail.com",
     phoneHeader: "सम्पर्क",
@@ -110,7 +110,8 @@ export default function Footer({ lang = "new" }: FooterProps) {
 
       {/* Bottom text */}
       <div className={`${font.body} text-center text-xs mt-4`}>
-        &copy; {info.year}. {info.footerName}.
+        &copy; {lang == "new" ? "𑐣𑐾.𑐳𑑄." : lang == "ne" ? "ने.सं." : "N.S."}{" "}
+        {info.year}. {info.footerName}.
       </div>
     </footer>
   );
