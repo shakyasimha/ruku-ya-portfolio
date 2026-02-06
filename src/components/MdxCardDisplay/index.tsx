@@ -21,7 +21,8 @@ type Card = {
 };
 
 type MdxCardDisplayProps = {
-  section: string; // e.g., "academics", "work", "affiliations", etc.
+  section: string; // MDX file name (e.g., "academics", "publications")
+  filterSection?: string | null; // Section header to filter (e.g., "Books")
 };
 
 const font = {
@@ -39,7 +40,10 @@ const font = {
   },
 };
 
-export default function MdxCardDisplay({ section }: MdxCardDisplayProps) {
+export default function MdxCardDisplay({
+  section,
+  filterSection = null,
+}: MdxCardDisplayProps) {
   const { lang } = useLanguage();
   const [content, setContent] = useState<string>("");
   const [loading, setLoading] = useState(true);
@@ -198,7 +202,14 @@ export default function MdxCardDisplay({ section }: MdxCardDisplayProps) {
   }
 
   // Parse content into sections
-  const sections = parseMarkdown(content);
+  let sections = parseMarkdown(content);
+
+  // Filter to specific section if filterSection is provided
+  if (filterSection) {
+    sections = sections.filter(
+      (s) => s.header.toLowerCase() === filterSection.toLowerCase(),
+    );
+  }
 
   // No content state
   if (sections.length === 0) {
@@ -213,8 +224,10 @@ export default function MdxCardDisplay({ section }: MdxCardDisplayProps) {
     <div className="space-y-12">
       {sections.map((section, sectionIndex) => (
         <div key={sectionIndex} className="space-y-6 mt-6 mb-6">
-          {/* Section Header (## headers) */}
-          <h3 className={`${font[lang].headerFont} text-2xl font-bold text-red-700 text-center mb-6`}>
+          {/* Section Header (## headers) - Always show */}
+          <h3
+            className={`${font[lang].headerFont} text-2xl font-bold text-red-700 text-center mb-6`}
+          >
             {section.header}
           </h3>
 
@@ -226,12 +239,16 @@ export default function MdxCardDisplay({ section }: MdxCardDisplayProps) {
                 className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:border-gray-300"
               >
                 {/* Card Title (### headers) - Bold with link support */}
-                <h4 className={`${font[lang].headerFont} font-bold text-lg text-gray-900 mb-4 border-b border-gray-100 pb-2`}>
+                <h4
+                  className={`${font[lang].headerFont} font-bold text-lg text-gray-900 mb-4 border-b border-gray-100 pb-2`}
+                >
                   {renderTitle(card.title)}
                 </h4>
 
                 {/* Card Content - Each line on new line */}
-                <div className={`${font[lang].bodyFont} space-y-2 text-gray-700 text-sm leading-relaxed`}>
+                <div
+                  className={`${font[lang].bodyFont} space-y-2 text-gray-700 text-sm leading-relaxed`}
+                >
                   {card.content.map((line, lineIndex) => (
                     <div
                       key={lineIndex}

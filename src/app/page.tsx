@@ -12,13 +12,14 @@ import {
 // import { nepalSambat, nepalSambatLatin } from "@/lib/fetchYear";
 // import Link from "next/link";
 import { useLanguage } from "@/lib/languageContext";
+import { experienceTabs, publicationTabs } from "@/data/tabContent";
 
 // Importing components here
 import Navbar from "@/components/Navbar";
 import Profile from "@/components/Profile";
 import Footer from "@/components/Footer";
 import MdxContent from "@/components/MdxContent";
-import MdxCardDisplay from "@/components/MdxCardDisplay";
+// import MdxCardDisplay from "@/components/MdxCardDisplay";
 import Tabs from "@/components/Tabs";
 
 const headerItems = {
@@ -83,7 +84,7 @@ export default function Home() {
           {/* About Me */}
           <div id="about">
             <h2
-              className={`${font[lang].headerFont} ${lang == "new" ? "" : "font-bold"} mb-4 text-3xl text-red-700 text-center`}
+              className={`${font[lang].headerFont} ${lang == "new" ? "" : "font-bold"} mb-8 text-3xl text-red-700 text-center`}
             >
               {headerItems[lang].aboutSection}
             </h2>
@@ -98,23 +99,25 @@ export default function Home() {
           {/* Experiences */}
           <div id="experiences">
             <h2
-              className={`${font[lang].headerFont} ${lang == "new" ? "" : "font-bold"} mt-8 mb-4 text-3xl text-red-700 text-center`}
+              className={`${font[lang].headerFont} ${lang == "new" ? "" : "font-bold"} mt-8 mb-8 text-3xl text-red-700 text-center`}
             >
               {headerItems[lang].experiencesSection}
             </h2>
 
-            <Tabs />
+            <Tabs tabs={experienceTabs} />
             {/* <MdxCardDisplay section="work" /> */}
           </div>
 
           {/* Publications */}
           <div id="publications">
             <h2
-              className={`${font[lang].headerFont} ${lang == "new" ? "" : "font-bold"} mt-8 mb-4 text-3xl text-red-700 text-center`}
+              className={`${font[lang].headerFont} ${lang == "new" ? "" : "font-bold"} mt-8 mb-8 text-3xl text-red-700 text-center`}
             >
               {headerItems[lang].publicationsSection}
             </h2>
-            <MdxCardDisplay section="publications" />
+
+            <Tabs tabs={publicationTabs} />
+            {/*<MdxCardDisplay section="publications" />*/}
           </div>
 
           {/* Advocacy and Litigations */}

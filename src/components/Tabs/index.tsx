@@ -1,83 +1,34 @@
 "use client";
 
 import { useState } from "react";
-import {
-  GraduationCap,
-  Briefcase,
-  Users,
-  Award,
-  Trophy,
-  Languages,
-} from "lucide-react";
 import { useLanguage } from "@/lib/languageContext";
 import MdxCardDisplay from "@/components/MdxCardDisplay";
 
-export default function Tabs() {
-  const lang = useLanguage();
-  const [activeTab, setActiveTab] = useState(0);
+type TabType = {
+  id: number;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  label: {
+    en: string;
+    ne: string;
+    new: string;
+  };
+  content: string;
+  section: null | {
+    en: string;
+    ne: string;
+    new: string;
+  };
+};
 
-  const tabs = [
-    {
-      id: 0,
-      icon: GraduationCap,
-      label: {
-        en: "Academics",
-        ne: "शिक्षा",
-        new: "",
-      },
-      content: "academics",
-    },
-    {
-      id: 1,
-      icon: Briefcase,
-      label: {
-        en: "Work Experience",
-        ne: "पेशागत अनुभव",
-        new: "",
-      },
-      content: "work",
-    },
-    {
-      id: 2,
-      icon: Users,
-      label: {
-        en: "Affiliations",
-        ne: "",
-        new: "",
-      },
-      content: "affiliations",
-    },
-    {
-      id: 3,
-      icon: Trophy,
-      label: {
-        en: "Fellowships",
-        ne: "",
-        new: "",
-      },
-      content: "fellowship",
-    },
-    {
-      id: 4,
-      icon: Award,
-      label: {
-        en: "Awards",
-        ne: "",
-        new: "",
-      },
-      content: "awards",
-    },
-    {
-      id: 5,
-      icon: Languages,
-      label: {
-        en: "Languages",
-        ne: "भाषा",
-        new: "",
-      },
-      content: "language",
-    },
-  ];
+export default function Tabs({ tabs }: { tabs: TabType[] }) {
+  const [activeTab, setActiveTab] = useState(0);
+  const { lang } = useLanguage();
+
+  // Get the section name in the current language
+  const currentSection = tabs[activeTab].section;
+  const filterSection = currentSection
+    ? currentSection[lang] || currentSection.en // Fallback to English if translation missing
+    : null;
 
   return (
     <div className="w-full">
@@ -102,7 +53,10 @@ export default function Tabs() {
       </div>
 
       {/* Tab Content */}
-      <MdxCardDisplay section={tabs[activeTab].content} />
+      <MdxCardDisplay
+        section={tabs[activeTab].content}
+        filterSection={filterSection}
+      />
     </div>
   );
 }
