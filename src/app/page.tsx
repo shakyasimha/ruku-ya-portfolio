@@ -18,6 +18,7 @@ import Profile from "@/components/Profile";
 import Footer from "@/components/Footer";
 import MdxContent from "@/components/MdxContent";
 import Tabs from "@/components/Tabs";
+import TravelMap from "@/components/TravelMap";
 
 const headerItems = {
   en: {
@@ -108,6 +109,19 @@ export default function Home() {
               </h2>
 
               <Tabs tabs={experienceTabs} />
+            </div>
+          )}
+
+          {/* Places Travelled */}
+          {activeSection === "places-travelled" && (
+            <div id="places-travelled">
+              <h2
+                className={`${font[lang].headerFont} ${lang == "new" ? "" : "font-bold"} mb-8 text-3xl text-red-700 text-center`}
+              >
+                {headerItems[lang].experiencesSection}
+              </h2>
+
+              <TravelMap />
             </div>
           )}
 
