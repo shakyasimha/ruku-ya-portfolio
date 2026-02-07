@@ -25,6 +25,7 @@ const headerItems = {
     headerFont: alegreyaSans.className,
     aboutSection: "About Me",
     experiencesSection: "My Experiences",
+    travelledSection: "Places Travelled",
     publicationsSection: "My Publications",
     advocacySection: "Advocacy & Litigation",
   },
@@ -32,6 +33,7 @@ const headerItems = {
     headerFont: notoSerifDevanagari.className,
     aboutSection: "मेरो परिचय",
     experiencesSection: "अनुभव",
+    travelledSection: "भ्रमण गेरेका स्थानहरू",
     publicationsSection: "प्रकाशन",
     advocacySection: "वकालत र मुद्दाहरू",
   },
@@ -39,6 +41,7 @@ const headerItems = {
     headerFont: nithyaRanjana.className,
     aboutSection: "जिगु म्हसिइका",
     experiencesSection: "न्वखं",
+    travelledSection: "भ्रमण गेरेका स्थानहरू",
     publicationsSection: "प्रकाशन",
     advocacySection: "वकालत व मुद्दा",
   },
@@ -118,7 +121,7 @@ export default function Home() {
               <h2
                 className={`${font[lang].headerFont} ${lang == "new" ? "" : "font-bold"} mb-8 text-3xl text-red-700 text-center`}
               >
-                {headerItems[lang].experiencesSection}
+                {headerItems[lang].travelledSection}
               </h2>
 
               <TravelMap />

@@ -10,6 +10,45 @@ type Place = {
   lng: number;
 };
 
+// Leaflet type declarations
+declare global {
+  interface Window {
+    L?: LeafletNamespace;
+  }
+}
+
+interface LeafletNamespace {
+  map: (element: HTMLElement) => LeafletMap;
+  tileLayer: (
+    url: string,
+    options: Record<string, unknown>,
+  ) => LeafletTileLayer;
+  marker: (
+    latlng: [number, number],
+    options?: { icon?: unknown },
+  ) => LeafletMarker;
+  divIcon: (options: {
+    className?: string;
+    html?: string;
+    iconSize?: [number, number];
+    iconAnchor?: [number, number];
+  }) => unknown;
+}
+
+interface LeafletMap {
+  setView: (latlng: [number, number], zoom: number) => LeafletMap;
+}
+
+interface LeafletTileLayer {
+  addTo: (map: LeafletMap) => LeafletTileLayer;
+}
+
+interface LeafletMarker {
+  addTo: (map: LeafletMap) => LeafletMarker;
+  bindPopup: (content: string) => LeafletMarker;
+  on: (event: string, handler: () => void) => void;
+}
+
 // Coordinates for all places
 const places: Place[] = [
   // Nepal - Major cities shown
@@ -129,10 +168,10 @@ export default function TravelMap() {
   }, []);
 
   const initMap = () => {
-    if (!mapRef.current || !(window as any).L) return;
+    if (!mapRef.current || !window.L) return;
 
     // Create map
-    const L = (window as any).L;
+    const L = window.L;
     const map = L.map(mapRef.current).setView([20, 0], 2);
 
     // Add tile layer
